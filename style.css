@@ -1,5 +1,3 @@
-
-
 @font-face {
  font-family: 'Lobster13Regular';
  src: url('Lobster_1.3-webfont.eot');
@@ -8,7 +6,47 @@
  font-style: normal;
 }
 
+body, html {
+    height: 100%;
+    background-image: url("night.jpg");
+    margin: 0;
+}
 
+svg{
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	font-weight:bold;
+	max-width:700px;
+	height:auto;
+	position: relative;
+	display: inline-block;
+	margin-left: 5%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+/* DIV PROPERTIES */
+
+.hide {
+  display: none;
+}
+
+.content{
+	background-color: #bacaf8;
+	border-radius: 15px;
+	width: 70%;
+	height: 700px;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 5%;
+	display: inline-block;
+	padding: 20px 20px 30px 35px;
+	overflow-y: scroll;
+}
+
+
+/* TEXT STYLES */
 h2 {
  font-size: 220px;
  line-height: 20px;
@@ -26,13 +64,11 @@ h2 {
 text{
 	font-size: 10px;
 }
-.hide {
-  display: none;
-}
 
 h1{
  font-size: 220px;
  line-height: 48px;
+ padding-bottom:15px;
  font-family: 'Lobster13Regular', Helvetica, sans-serif;
  font-weight: bold;
  text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
@@ -44,52 +80,8 @@ h1{
 p{
 	font-size: 20px;
 	text-indent: 30px;
+	text-align: justify;
 	font-family: 'Lobster13Regular', Helvetica, sans-serif;
-}
-
-.modalP{
-	font-size: 15px;
-	text-indent: 30px;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
-}
-h3{
-	font-size: 15px;
-	text-indent: 40px;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
-	font-weight: bold;
-	-webkit-text-stroke: 4px rgba(0, 0, 0, .6);
-}
-
-.keyword{
-	text-decoration-color: blue;
-	font-weight: bold;
-}
-
-span{
-	font-weight: bold;
-	color: blue;
-	text-decoration-color: blue;
-	text-indent: 40px;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
-}
-
-li{
-	font-size: 20px;
-	margin-left: 35px;
-}
-
-
-.content{
-	background-color: #bacaf8;
-	border-radius: 15px;
-	width: 70%;
-	height: 700px;
-	position: relative;
-	margin-top: 10px;
-	margin-left: 5%;
-	display: inline-block;
-	padding: 20px 20px 30px 35px;
-	overflow-y: scroll;
 }
 
 .text-span{
@@ -99,6 +91,29 @@ li{
 
 .text-span2{
 	text-indent:20%;
+}
+
+h3{
+	font-size: 15px;
+	text-indent: 40px;
+	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-text-stroke: 4px rgba(0, 0, 0, .6);
+}
+
+span{
+	font-weight: bold;
+	color: red;
+	text-indent: 40px;
+	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+}
+
+/* LIST */
+
+
+li{
+	font-size: 20px;
+	margin-left: 35px;
 }
 
 .list{
@@ -111,24 +126,15 @@ li{
 	float: right;
 }
 
-body, html {
-    height: 100%;
-    background-image: url("night.jpg");
-    margin: 0;
+
+/* MODAL PROPERTIES */
+
+.modalP{
+	font-size: 15px;
+	text-indent: 30px;
+	font-family: 'Lobster13Regular', Helvetica, sans-serif;
 }
 
-svg{
-	border: 4px double rgba(255,255,255,.25);
-	border-width: 4px 0;
-	font-weight:bold;
-	max-width:700px;
-	height:auto;
-	position: relative;
-	display: inline-block;
-	margin-left: 10%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
 
 .modal {
   text-align: center;
@@ -155,9 +161,12 @@ svg{
 	overflow-y: scroll;
 }
 
+/* IMAGE AND BUTTON */
 .image{
 	display:block;
     margin:auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -169,12 +178,6 @@ svg{
 .buttonSec{
 	margin-top: 7px;
 }
-
-.hidden-div {
-    display: none;
-}
-
-
 
 
 /* SPEARKER BUTTON IN MODAL */
@@ -298,5 +301,3 @@ svg{
 		height:3.5em;
     }
 }
-
-
