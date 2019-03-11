@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+</head>
+
+<svg viewbox="0 0 100 20">
+  <defs>
+    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="#326384"/>
+      <stop offset="95%" stop-color="#dce2f1"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="0" width="250" height="50" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#wave)"  fill-opacity="0.7">AUDIO EFFECTS</text>
+  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#gradient)" fill-opacity="0.4">AUDIO EFFECTS</text>
+</svg>
+
+
+<body>
+
+
+	
+	<div class="content">
+   
+      <h1>What are audio effects?</h1>
+
+      <p>
+        Audio effects are analog or digital devices that are used to intentionally alter how a musical instrument or other audio source sounds. Effects can be subtle or extreme, and they can be used in live or recording situations. A good example of audio effects are the “stomp boxes” that many electric guitarists use to achieve their desired sound. By chaining together many different types of effects, a musician can sculpt a unique tone and enhance their music in many ways.
+      </p>
+      <br></br>
+
+
+      <h1>Basic digital audio signal processing</h1>
+      <p>All sounds we hear with our ears are pressure waves in air.
+        Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform: 
+      </p> 
+      <br></br>
+      <img class="image" src="waveform_digital.png"></img>
+       <br></br>
+      <p>
+        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or change the pitch. 
+      </p>
+      <br></br>
+      <h1>Principles of digital audio signal processing</h1>
+      <h3>1. Simple waveforms</h3>
+      <img class="image" src="Capture.png"></img>
+      <br></br>
+      <p class="subsection">• <span>Frequency</span> is the number of cycles per second and i smeasured in Hertz(Hz)</p>
+      <p>• <span>Wavelength</span> is inversely proportional to frequency </p>
+      <p>i.e. Wavelength varies as 1/frequency</p>
+
+      <br></br>
+      <h3>2. The Sine vs Cosine Wave and Sound</h3>
+      <br></br>
+      <img class="image" src="sincos.png"></img>
+      <br></br>
+    <p>
+      The general form of the <span>sine</span> wave we shall use(quite a lot of) is as follows: </p>
+       <p class="text-span"><i>y = A.sin(2π.n.Fw/Fs)</i></p>
+       <p>where:</p>
+       <p class="text-span2"><i>A</i> is the amplitude of the wave,</p>
+       <p class="text-span2"><i>Fw</i> is the frequency of the wave, </p>
+       <p class="text-span2"><i>Fs</i> is the sample frequency, </p>
+       <p class="text-span2"><i>n</i> is the sample index</p>
+       <p><span>Cosine</span> is same as Sine (except 90 degrees out of phase)</p>
+       <br></br>
+
+       <p><u>Relationship between <i>Amplitude</i>,<i>Frequency</i> and <i>Phase</i></u></p>
+       <img class="image" src="rel.png"/>
+       <br></br>
+
+     
+	</div>
+
+	<div class="list">
+		<h2>Categories of audio effects</h2>
+    
+    
+
+     <ul id="types">
+        <li>Modulation effects
+        <ul class="effect hide">
+          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Chorus">Chorus
+            <div class="profile hide">
+             <div class="modalP">
+               Chorus is an effect obtained when similar sounds with slight variations in tuning and timing overlap and are heard as one.
+It happens naturally when multiple sources make a similar sound overlap. Think of a real life choir singing multiple parts at the same time. They all overlap to form a distinct sound. The chorus effect does the same thing!
+             </div>
+            </div></li>
+          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Flanger">Flanger</li>
+          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Phaser">Phaser</li>
+        </ul></li>
+        <li>Time-based effects
+          <ul class="effect hide">
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Reverb">Reverb</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Delay">Delay</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Echo">Echo</li>
+          </ul>
+        </li>
+        <li>Spectral effects
+          <ul class="effect hide">
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Equaliser">Equaliser</li>
+          </ul>
+        </li>
+        <li>Dynamic effects
+          <ul class="effect hide">
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Compression">Compression</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Overdrive">Overdrive/Distortion</li>            
+          </ul>
+        </li>
+        <li>Filters
+          <ul class="effect hide">
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="High-Pass Filters">High-Pass Filters</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Low-Pass Filters">Low-Pass Filters</li>
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Band-Pass Filters">Band-Pass Filters</li>
+          </ul>
+        </li>
+      </ul>
+
+	</div>
+
+  
+
+   <script type="text/javascript">
+    $("#types > li").click(function() {
+  $(this).find("ul.effect").toggleClass('hide');
+});
+  </script>
+
+  <script>
+   $("li[data-target='#exampleModalCenter']").on('click',function(){
+    var infoModal = $('#exampleModalCenter');
+  $(".modal-header").html($(this).attr('data-content'));
+  htmlData = $(this).find('.profile').html();
+  infoModal.find('.modal-body').html(htmlData);
+   
+});
+    </script>
+
+  <<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <modalP></modalP>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="buttonSec w3-button w3-black w3-round-large" data-dismiss="modal">Close</button>
+        <button type="button" class="button icon speaker"></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+</html>
