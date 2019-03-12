@@ -11,6 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
+
 </head>
 
 <svg viewbox="0 0 100 20">
@@ -38,26 +39,18 @@
 
 
 <body>
-
-
-	
 	<div class="content">
-   
       <h1>What are audio effects?</h1>
-
       <p>
         Audio effects are analog or digital devices that are used to intentionally alter how a musical instrument or other audio source sounds. Effects can be subtle or extreme, and they can be used in live or recording situations. A good example of audio effects are the “stomp boxes” that many electric guitarists use to achieve their desired sound. By chaining together many different types of effects, a musician can sculpt a unique tone and enhance their music in many ways.
       </p>
       <br></br>
 
-
       <h1>Basic digital audio signal processing</h1>
       <p>All sounds we hear with our ears are pressure waves in air.
         Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform: 
       </p> 
-      <br></br>
       <img class="image" src="waveform_digital.png"></img>
-       <br></br>
       <p>
         Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or change the pitch. 
       </p>
@@ -65,16 +58,12 @@
       <h1>Principles of digital audio signal processing</h1>
       <h3>1. Simple waveforms</h3>
       <img class="image" src="Capture.png"></img>
-      <br></br>
       <p class="subsection">• <span>Frequency</span> is the number of cycles per second and i smeasured in Hertz(Hz)</p>
       <p>• <span>Wavelength</span> is inversely proportional to frequency </p>
       <p>i.e. Wavelength varies as 1/frequency</p>
-
       <br></br>
       <h3>2. The Sine vs Cosine Wave and Sound</h3>
-      <br></br>
       <img class="image" src="sincos.png"></img>
-      <br></br>
     <p>
       The general form of the <span>sine</span> wave we shall use(quite a lot of) is as follows: </p>
        <p class="text-span"><i>y = A.sin(2π.n.Fw/Fs)</i></p>
@@ -86,11 +75,9 @@
        <p><span>Cosine</span> is same as Sine (except 90 degrees out of phase)</p>
        <br></br>
 
-       <p><u>Relationship between <i>Amplitude</i>,<i>Frequency</i> and <i>Phase</i></u></p>
+       <p>Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></p>
        <img class="image" src="rel.png"/>
        <br></br>
-
-     
 	</div>
 
 	<div class="list">
@@ -142,21 +129,7 @@ It happens naturally when multiple sources make a similar sound overlap. Think o
 
   
 
-   <script type="text/javascript">
-    $("#types > li").click(function() {
-  $(this).find("ul.effect").toggleClass('hide');
-});
-  </script>
-
-  <script>
-   $("li[data-target='#exampleModalCenter']").on('click',function(){
-    var infoModal = $('#exampleModalCenter');
-  $(".modal-header").html($(this).attr('data-content'));
-  htmlData = $(this).find('.profile').html();
-  infoModal.find('.modal-body').html(htmlData);
-   
-});
-    </script>
+ 
 
   <<!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -184,6 +157,22 @@ It happens naturally when multiple sources make a similar sound overlap. Think o
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $("#types > li").click(function() {
+$(this).find("ul.effect").toggleClass('hide');
+});
+</script>
+
+<script type="text/javascript">
+   $("li[data-target='#exampleModalCenter']").on('click',function(){
+  var infoModal = $('#exampleModalCenter');
+  $(".modal-header").html($(this).attr('data-content'));
+  htmlData = $(this).find('.profile').html();
+  infoModal.find('.modal-body').html(htmlData);  
+});
+</script>
+ 
 
 </body>
 
