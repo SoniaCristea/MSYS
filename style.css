@@ -27,7 +27,6 @@ svg{
 
 
 /* TEXT PROPERTIES */
-
 h2 {
  font-size: 220px;
  line-height: 20px;
@@ -50,6 +49,7 @@ text{
 h1{
  font-size: 220px;
  line-height: 48px;
+ padding-bottom:15px;
  font-family: 'Lobster13Regular', Helvetica, sans-serif;
  font-weight: bold;
  padding-bottom: 15px;
@@ -59,6 +59,21 @@ h1{
  -webkit-text-stroke: 4px rgba(0, 0, 0, .6);	
 }
 
+p{
+	font-size: 20px;
+	text-indent: 30px;
+	text-align: justify;
+	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+}
+
+.text-span{
+	text-indent:35%;
+	font-size: 17px;
+}
+
+.text-span2{
+	text-indent:20%;
+}
 
 h3{
 	font-size: 15px;
@@ -76,7 +91,10 @@ span{
 	font-family: 'Lobster13Regular', Helvetica, sans-serif;
 }
 
-p{
+/* LIST */
+
+
+li{
 	font-size: 20px;
 	text-indent: 30px;
 	text-align: justify;
@@ -129,7 +147,8 @@ li{
 	margin-left: 35px;
 }
 
-/* MODAL */
+/* MODAL PROPERTIES */
+
 .modalP{
 	font-size: 15px;
 	text-indent: 30px;
@@ -178,8 +197,6 @@ li{
 .buttonSec{
 	margin-top: 7px;
 }
-
-
 
 
 /* SPEARKER BUTTON IN MODAL */
@@ -303,5 +320,3 @@ li{
 		height:3.5em;
     }
 }
-
-
