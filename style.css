@@ -66,21 +66,14 @@ p{
 	font-family: 'Lobster13Regular', Helvetica, sans-serif;
 }
 
-.text-span{
-	text-indent:35%;
-	font-size: 17px;
-}
 
-.text-span2{
-	text-indent:20%;
-}
 
 h3{
 	font-size: 15px;
 	text-indent: 40px;
 	font-family: 'Lobster13Regular', Helvetica, sans-serif;
 	font-weight: bold;
-	-webkit-text-stroke: 4px rgba(0, 0, 0, .6);
+	-webkit-text-stroke: 2px rgba(0, 0, 0, .6);
 }
 
 span{
@@ -108,6 +101,16 @@ li{
 
 .text-span2{
 	text-indent:20%;
+
+}
+
+span2{
+	margin-left: -25px;
+}
+
+span3{
+	margin-left: -25px;
+	font-size: 17px;
 }
 
 /* DIV PROPERTIES */
@@ -148,9 +151,6 @@ li{
 	margin-left: 35px;
 }
 
-span2{
-	margin-left: -25px;
-}
 /* MODAL PROPERTIES */
 
 .modalP{
@@ -163,6 +163,11 @@ span2{
 .modal {
   text-align: center;
   padding: 0!important;
+}
+
+.modal-text{
+	font-size: 15px;
+	text-indent: 25px;
 }
 
 .modal:before {
