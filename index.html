@@ -5,11 +5,12 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
 
 </head>
@@ -47,12 +48,19 @@
       <br></br>
 
       <h1>Basic digital audio signal processing</h1>
-      <p>All sounds we hear with our ears are pressure waves in air.
-        Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform: 
+      <p>
+        All sounds we hear with our ears are pressure waves in air.
+        Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. For example, in CD audio, samples are taken 44100 times per second each with 16 bit 
+        <a href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-full="4.png">
+        sample depth.</a>
+         Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform: 
       </p> 
       <img class="image" src="waveform_digital.png"></img>
       <p>
-        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or change the pitch. 
+        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <span-keyword>pitch</span-keyword>. 
+      </p>
+      <p><i>What does shifting the pitch refer to? </i><span-keyword>Pitch shifting</span-keyword> represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
+        Usually, the simplest methods are used to raise the pitch and reduce the duration, or vice-versa. This means replaying the original sound at a higher pace than it was recorded.
       </p>
       <br></br>
       <h1>Principles of digital audio signal processing</h1>
@@ -269,6 +277,17 @@
   </div>
 </div>
 
+<div class="toast">
+    <div class="toast-header">
+      Toast Header
+    </div>
+    <div class="toast-body">
+      Some text inside the toast body
+    </div>
+  </div>
+</div>
+
+
 <script type="text/javascript">
   $("#types > li").click(function() {
 $(this).find("ul.effect").toggleClass('hide');
@@ -281,6 +300,21 @@ $(this).find("ul.effect").toggleClass('hide');
   $(".modal-header").html($(this).attr('data-content'));
   htmlData = $("li[data-content='" + $(this).attr('data-content') + "']").find('.profile').html();
   infoModal.find('.modal-body').html(htmlData);  
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $('a[data-toggle=popover]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+
+  content: function(){
+    var url = $(this).data('full');
+    return '<span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="' + url + '" width="350px" height="300px"><br></br><span-popover> In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</span-popver>';}
+});
+  
 });
 </script>
  
