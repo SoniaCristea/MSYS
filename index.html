@@ -43,52 +43,81 @@
 	<div class="content">
       <h1>What are audio effects?</h1>
       <p>
-        Audio effects are analog or digital devices that are used to intentionally alter how a musical instrument or other audio source sounds. Effects can be subtle or extreme, and they can be used in live or recording situations. A good example of audio effects are the “stomp boxes” that many electric guitarists use to achieve their desired sound. By chaining together many different types of effects, a musician can sculpt a unique tone and enhance their music in many ways.
+        Audio effects are analog or digital devices that are used to intentionally alter how a musical instrument or other audio source sounds. Effects can be subtle or extreme, and they can be used in live or recording situations. A good example of audio effects are the “stomp boxes” that many electric guitarists use to achieve their desired sound.By chaining together many different types of effects, a musician can sculpt a unique tone and enhance their music in many ways.
       </p>
       <br></br>
-
       <h1>Basic digital audio signal processing</h1>
-      <p>
+      <p class="popContent">
         All sounds we hear with our ears are pressure waves in air.
         Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. For example, in CD audio, samples are taken 44100 times per second each with 16 bit 
-        <a href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-full="4.png">
+        <a href="div1" id="pop1" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-full="img/4.png">
         <span-keyword>sample depth.</span-keyword></a>
-         Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform: 
+         Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform:
+         <div class="hide" id="div1">
+          <span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="" class="pop" width="350px" height="300px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
+        </div> 
+         
+        
       </p> 
-      <img class="image" src="waveform_digital.png"></img>
+      <div class="img-caption">
+        <img class="image" src="img/waveform_digital.png"></img>
+        <p class="caption"><i>Figure 1. Sine Waveforms</i></p>
+      </div>
+      
       <p>
-        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <span-keyword>pitch</span-keyword>. 
+        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <a href="div2" id="pop2" data-toggle="popover" data-trigger="hover" data-placement="left"><span-keyword>pitch</span-keyword>
+        </a>.
+         <div class="hide" id="div2">
+        <span-popover><span>Pitch</span> is the quality of a sound represented by the rate of virbations producing it.
+          Also, it can be defined as the <i>highness</i> or <i>lowness</i> of a tone.
+        </span-popover>
+      </div> 
       </p>
-      <p><i>What does shifting the pitch refer to? </i><span-keyword>Pitch shifting</span-keyword> represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
+    
+      <p><i><b>What does shifting the pitch refer to? </b></i>Pitch shifting represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
         Usually, the simplest methods are used to raise the pitch and reduce the duration, or vice-versa. This means replaying the original sound at a higher pace than it was recorded.
       </p>
       <br></br>
       <h1>Principles of digital audio signal processing</h1>
       <h3>1. Simple waveforms</h3>
-      <img class="image" src="Capture.png"></img>
+      <div class="img-caption">
+        <img class="image" src="img/Capture.png"></img>
+        <p class="caption"><i>Figure 2. Simple Waveforms</i></p>
+      </div>
+      
       <p class="subsection">• <span>Frequency</span> is the number of cycles per second and is measured in Hertz(Hz)</p>
-      <p>• <span>Wavelength</span> is inversely proportional to frequency </p>
-      <p>i.e. Wavelength varies as 1/frequency</p>
+      <p>• <span>Wavelength</span> is inversely proportional to frequency <span style='font-size:20px;'>&#10140;</span>
+       <u> wavelength varies as <i>1/frequency</i></u>
+      </p>
       <br></br>
       <h3>2. The Sine vs Cosine Wave and Sound</h3>
-      <img class="image" src="sincos.png"></img>
+       <div class="img-caption">
+        <img class="image" src="img/sincos.png"></img>
+        <p class="caption"><i>Figure 3. Sine and Cosine Wave and Sound</i></p>
+      </div>
+        
+
     <p>
       The general form of the <span>sine</span> wave we shall use is as follows: </p>
        <p class="text-span"><i>y = A.sin(2π.n.Fw/Fs)</i></p>
        <p>where:</p>
-       <p class="text-span2"><i>A</i> is the amplitude of the wave,</p>
-       <p class="text-span2"><i>Fw</i> is the frequency of the wave, </p>
-       <p class="text-span2"><i>Fs</i> is the sample frequency, </p>
-       <p class="text-span2"><i>n</i> is the sample index</p>
-       <p><span>Cosine</span> is same as Sine (except 90 degrees out of phase)</p>
+       <p class="text-span2"><i>A</i> is the <i>amplitude</i> of the wave,</p>
+       <p class="text-span2"><i>Fw</i> is the <i>frequency</i> of the wave, </p>
+       <p class="text-span2"><i>Fs</i> is the <i>sample frequency</i>, </p>
+       <p class="text-span2"><i>n</i> is the <i>sample index</i></p>
+       <p><span>Cosine</span> is same as <span>Sine</span> (except 90 degrees out of phase)</p>
        <br></br>
-       <p><span style='font-size:40px;'>&#10071;</span> Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></p>
-       <img class="image" src="rel.png"/>
+       <h3><span style='font-size:40px;'>&#10071;</span> Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></h3>
+       <div class="img-caption">
+        <img class="image" src="img/rel.png"/>
+        <p class="caption"><i>Figure 4. Relationship between Amplitude,Frequency and Phase</i></p>
+      </div>
+       
        <p>where:</p>
        <p class="text-span2"><span>Frequency</span> of a wave is the number of waves that pass by each second</p>
        <p class="text-span2"><span>Amplitude</span> is the height of the wave and often related to power.</p>
        <p class="text-span2"><span>Phase</span> involves the relationship between the position of the amplitude crests and troughs of two waveforms.</p>
-       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html">link</a></p>
+       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html"><u>link</u></a></p>
        <br></br>
 	</div>
 
@@ -282,49 +311,11 @@
   </div>
 </div>
 
-<div class="toast">
-    <div class="toast-header">
-      Toast Header
-    </div>
-    <div class="toast-body">
-      Some text inside the toast body
-    </div>
-  </div>
-</div>
 
-
-<script type="text/javascript">
-  $("#types > li").click(function() {
-$(this).find("ul.effect").toggleClass('hide');
-});
-</script>
-
-<script type="text/javascript">
-   $("li[data-target='#exampleModalCenter']").on('click',function(){
-  var infoModal = $('#exampleModalCenter');
-  $(".modal-header").html($(this).attr('data-content'));
-  htmlData = $("li[data-content='" + $(this).attr('data-content') + "']").find('.profile').html();
-  infoModal.find('.modal-body').html(htmlData);  
-});
-</script>
-
-<script>
-$(document).ready(function(){
-  $('a[data-toggle=popover]').popover({
-  html: true,
-  trigger: 'hover',
-  placement: 'bottom',
-
-  content: function(){
-    var url = $(this).data('full');
-    return '<span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="' + url + '" width="350px" height="300px"><br></br><span-popover> In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</span-popver>';}
-});
-  
-});
-</script>
+<script type="text/javascript" src="js/open.js"></script>
+<script type="text/javascript" src="js/populate.js"></script>
+<script type="text/javascript" src="js/popover.js"></script>
  
-
 </body>
-
 
 </html>

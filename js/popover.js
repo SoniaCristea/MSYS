@@ -21,13 +21,13 @@ $(document).ready(function(){
 });
 
 function position(context, source) {
-  
+
         var position = $(source).position();
 
-        if (position.left > 515) {
+        if (position.left > 420) {
             return "left";
         }
-        if (position.left < 515) {
+        if (position.left < 420) {
             return "right";
         }
         if (position.top < 200){

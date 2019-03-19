@@ -8,11 +8,12 @@
 
 body, html {
     height: 100%;
-    background-image: url("night.jpg");
+    background-image: url("img/night.jpg");
     margin: 0;
 }
 body .popover{
 	max-width: 400px;
+	padding-right: 20px;
 }
 
 
@@ -34,7 +35,7 @@ svg{
 h2 {
  font-size: 220px;
  line-height: 20px;
- font-family: 'Lobster13Regular', Helvetica, sans-serif;
+ font-family: Times New Roman, sans-serif;
  font-weight: bold;
  text-align: center;
  vertical-align: middle;
@@ -54,7 +55,7 @@ h1{
  font-size: 220px;
  line-height: 48px;
  padding-bottom:15px;
- font-family: 'Lobster13Regular', Helvetica, sans-serif;
+ font-family: Times New Roman, sans-serif;
  font-weight: bold;
  padding-bottom: 15px;
  text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
@@ -67,13 +68,14 @@ p{
 	font-size: 17px;
 	text-indent: 30px;
 	text-align: justify;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-family: Times New Roman, sans-serif;
 }
 
 span-popover{
 	font-size: 12px;
 	text-indent: 20px;
 	text-align: justify;
+
 }
 
 
@@ -81,9 +83,15 @@ span-popover{
 h3{
 	font-size: 15px;
 	text-indent: 40px;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-family: Times New Roman, sans-serif;
 	font-weight: bold;
 	-webkit-text-stroke: 2px rgba(0, 0, 0, .6);
+}
+
+.caption{
+	font-size: 14px;
+	font-family: Times New Roman;
+	text-align: center;
 }
 
 span{
@@ -91,14 +99,14 @@ span{
 	color: red;
 	text-decoration-color: red;
 	text-indent: 40px;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-family: Times New Roman, sans-serif;
 }
 
 span-keyword{
 	font-weight: bold;
 	color: blue;
 	text-decoration-color: blue;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-family: Times New Roman, sans-serif;
 }
 
 /* LIST */
@@ -108,17 +116,23 @@ li{
 	font-size: 20px;
 	text-indent: 30px;
 	text-align: justify;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-family: Times New Roman, sans-serif;
 }
 
+p a{
+	color: blue;
+}
 .text-span{
-	text-indent:35%;
-	font-size: 17px;
+	
+	font-size: 18px;
+	text-align: center;
+	font-family: Times New Roman;
+
 }
 
 .text-span2{
-	text-indent:20%;
-
+	text-indent:10%;
+	font-size: 17px;
 }
 
 span2{
@@ -150,6 +164,12 @@ span3{
 	overflow-y: auto;
 }
 
+.img-caption{
+	height: auto;
+	width: auto;
+	padding-bottom: 15px;
+}
+
 .list{
 	background-color: #bacaf8;
 	margin-top: 8px;
@@ -174,7 +194,7 @@ li{
 .modalP{
 	font-size: 15px;
 	text-indent: 30px;
-	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-family: Times New Roman, sans-serif;
 }
 
 
