@@ -13,12 +13,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
 
+
 </head>
 
-<svg viewbox="0 0 100 20">
+<div class="header">
+<svg viewbox="0 0 100 20  ">
   <defs>
     <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="#326384"/>
+      <stop offset="5%" stop-color="#DDA0DD"/>
       <stop offset="95%" stop-color="#dce2f1"/>
     </linearGradient>
     <pattern id="wave" x="0" y="0" width="250" height="50" patternUnits="userSpaceOnUse">
@@ -34,61 +36,90 @@
       </path>
     </pattern>
   </defs>
-  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#wave)"  fill-opacity="0.7">AUDIO EFFECTS</text>
-  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#gradient)" fill-opacity="0.4">AUDIO EFFECTS</text>
-</svg>
+  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#wave)"  fill-opacity="0.8">AUDIO EFFECTS</text>
+  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#gradient)" fill-opacity="0.5">AUDIO EFFECTS</text>
+</svg></div>
 
 <body>
   <!-- Main div on the page containing information about project -->
 	<div class="content">
       <h1>What are audio effects?</h1>
       <p>
-        Audio effects are analog or digital devices that are used to intentionally alter how a musical instrument or other audio source sounds. Effects can be subtle or extreme, and they can be used in live or recording situations. A good example of audio effects are the “stomp boxes” that many electric guitarists use to achieve their desired sound. By chaining together many different types of effects, a musician can sculpt a unique tone and enhance their music in many ways.
+        Audio effects are analog or digital devices that are used to intentionally alter how a musical instrument or other audio source sounds. Effects can be subtle or extreme, and they can be used in live or recording situations. A good example of audio effects are the “stomp boxes” that many electric guitarists use to achieve their desired sound.By chaining together many different types of effects, a musician can sculpt a unique tone and enhance their music in many ways.
       </p>
       <br></br>
-
       <h1>Basic digital audio signal processing</h1>
-      <p>
+      <p class="popContent">
         All sounds we hear with our ears are pressure waves in air.
         Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. For example, in CD audio, samples are taken 44100 times per second each with 16 bit 
-        <a href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-full="4.png">
+        <a href="div1" id="pop1" data-toggle="popover" data-trigger="hover" data-full="img/4.png">
         <span-keyword>sample depth.</span-keyword></a>
-         Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform: 
+         Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform:
+         <div class="hide" id="div1">
+          <span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="" class="pop" width="350px" height="300px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
+        </div> 
+         
+        
       </p> 
-      <img class="image" src="waveform_digital.png"></img>
+      <div class="img-caption">
+        <img class="image" src="img/waveform_digital.png"></img>
+        <p class="caption"><i>Figure 1. Sine Waveforms</i></p>
+      </div>
+      
       <p>
-        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <span-keyword>pitch</span-keyword>. 
+        Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <a href="div2" id="pop2" data-toggle="popover" data-trigger="hover"><span-keyword>pitch</span-keyword>
+        </a>.
+         <div class="hide" id="div2">
+        <span-popover><span>Pitch</span> is the quality of a sound represented by the rate of virbations producing it.
+          Also, it can be defined as the <i>highness</i> or <i>lowness</i> of a tone.
+        </span-popover>
+      </div> 
       </p>
-      <p><i>What does shifting the pitch refer to? </i><span-keyword>Pitch shifting</span-keyword> represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
+    
+      <p><i><b>What does shifting the pitch refer to? </b></i>Pitch shifting represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
         Usually, the simplest methods are used to raise the pitch and reduce the duration, or vice-versa. This means replaying the original sound at a higher pace than it was recorded.
       </p>
       <br></br>
       <h1>Principles of digital audio signal processing</h1>
       <h3>1. Simple waveforms</h3>
-      <img class="image" src="Capture.png"></img>
+      <div class="img-caption">
+        <img class="image" src="img/Capture.png"></img>
+        <p class="caption"><i>Figure 2. Simple Waveforms</i></p>
+      </div>
+      
       <p class="subsection">• <span>Frequency</span> is the number of cycles per second and is measured in Hertz(Hz)</p>
-      <p>• <span>Wavelength</span> is inversely proportional to frequency </p>
-      <p>i.e. Wavelength varies as 1/frequency</p>
+      <p>• <span>Wavelength</span> is inversely proportional to frequency <span style='font-size:20px;'>&#10140;</span>
+       <u> wavelength varies as <i>1/frequency</i></u>
+      </p>
       <br></br>
       <h3>2. The Sine vs Cosine Wave and Sound</h3>
-      <img class="image" src="sincos.png"></img>
+       <div class="img-caption">
+        <img class="image" src="img/sincos.png"></img>
+        <p class="caption"><i>Figure 3. Sine and Cosine Wave and Sound</i></p>
+      </div>
+        
+
     <p>
       The general form of the <span>sine</span> wave we shall use is as follows: </p>
        <p class="text-span"><i>y = A.sin(2π.n.Fw/Fs)</i></p>
        <p>where:</p>
-       <p class="text-span2"><i>A</i> is the amplitude of the wave,</p>
-       <p class="text-span2"><i>Fw</i> is the frequency of the wave, </p>
-       <p class="text-span2"><i>Fs</i> is the sample frequency, </p>
-       <p class="text-span2"><i>n</i> is the sample index</p>
-       <p><span>Cosine</span> is same as Sine (except 90 degrees out of phase)</p>
+       <p class="text-span2"><i>A</i> is the <i>amplitude</i> of the wave,</p>
+       <p class="text-span2"><i>Fw</i> is the <i>frequency</i> of the wave, </p>
+       <p class="text-span2"><i>Fs</i> is the <i>sample frequency</i>, </p>
+       <p class="text-span2"><i>n</i> is the <i>sample index</i></p>
+       <p><span>Cosine</span> is same as <span>Sine</span> (except 90 degrees out of phase)</p>
        <br></br>
-       <p><span style='font-size:40px;'>&#10071;</span> Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></p>
-       <img class="image" src="rel.png"/>
+       <h3><span style='font-size:40px;'>&#10071;</span> Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></h3>
+       <div class="img-caption">
+        <img class="image" src="img/rel.png"/>
+        <p class="caption"><i>Figure 4. Relationship between Amplitude,Frequency and Phase</i></p>
+      </div>
+       
        <p>where:</p>
        <p class="text-span2"><span>Frequency</span> of a wave is the number of waves that pass by each second</p>
        <p class="text-span2"><span>Amplitude</span> is the height of the wave and often related to power.</p>
        <p class="text-span2"><span>Phase</span> involves the relationship between the position of the amplitude crests and troughs of two waveforms.</p>
-       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html">link</a></p>
+       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html"><u>link</u></a></p>
        <br></br>
 	</div>
 
@@ -101,21 +132,22 @@
           <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Chorus"><span3>Chorus</span3>
             <div class="profile hide">
              <div class="modalP">
-              <p class="modal-text" modal><i>Chorus</i> is an effect obtained when similar sounds with slight variations in tuning and timing overlap and are heard as one.
+              <p class="modal-text" modal><i><b>Chorus</b></i> is an effect obtained when similar sounds with slight variations in tuning and timing overlap and are heard as one.
               It happens naturally when multiple sources make a similar sound overlap. Think of a real life choir singing multiple parts at the same time. They all overlap to form a distinct sound. The chorus effect does the same thing!</p>
 
               <h3>How does Chorus work?</h3>
-              <p class="modal-text">Chorus as an electronic effect works in the following way: the chorus audio processor (whether a pedal, effects unit or plugin) makes copies of the original audio signal and applies delay and pitch-modulation (using LFOs) to those copies.
-              A stereo chorus does the same, with added panning in the delays and offset phase on the LFO. This causes those added copies and modulations to go between your left and right. The effect will sound fuller because of the movement in your stereo field.</p>
-             </div>
+              <p class="modal-text">Chorus as an electronic effect works in the following way: the chorus audio processor (whether a pedal, effects unit or plugin) makes copies of the original audio signal and applies delay and pitch-modulation (using 
+                <a href="https://en.wikipedia.org/wiki/Low-frequency_oscillation">LFO</a>) to those copies.
+              A stereo chorus does the same, with added <a href="https://en.wikipedia.org/wiki/Panning_(audio)">panning</a> in the delays and offset phase on the LFO. This causes those added copies and modulations to go between your left and right. The effect will sound fuller because of the movement in your stereo field.</p>
+              
             </div></li>
           <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Flanger"><span3>Flanger</span3>
             <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>Flanger</i> is an audio effect produced by mixing two identical signals together, one signal delayed by a small and gradually changing period, usually smaller than 20 milliseconds. This produces a swept comb filter effect: peaks and notches are produced in the resulting frequency spectrum, related to each other in a linear harmonic series. Varying the time delay causes these to sweep up and down the frequency spectrum. A flanger is an effects unit that creates this effect.</p>
+               <p class="modal-text" modal><i><b>Flanger</b></i> is an audio effect produced by mixing two identical signals together, one signal delayed by a small and gradually changing period, usually smaller than 20 milliseconds. This produces a swept comb filter effect: peaks and notches are produced in the resulting frequency spectrum, related to each other in a linear harmonic series. Varying the time delay causes these to sweep up and down the frequency spectrum.</p>
                <h3>How does the flanger work?</h3>
                <p class="modal-text">
-                 Flanging, while sonically similar to Phasing, is functionally closer to a Chorus. It uses a short delay (0.1ms – ~10ms) and modulates that against the dry signal with an LFO. If you kept extending the delay time on a flanger you’d end up with a chorus.It has the ability to feedback the processed signal to the input which further reinforces and intensifies the effect.
+                 Flanging, while sonically similar to Phasing, is functionally closer to a Chorus. It uses a short delay (0.1ms – ~10ms) and modulates it against the dry signal with an LFO. If you kept extending the delay time on a flanger you’d end up with a chorus.It has the ability to feedback the processed signal to the input which further reinforces and intensifies the effect.
                </p>
              </div>
             </div>
@@ -123,7 +155,7 @@
           <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Phaser"><span3>Phaser</span3>
             <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>A phaser</i> is an electronic sound processor used to filter a signal by creating a series of peaks and troughs in the frequency spectrum. The position of the peaks and troughs of the waveform being affected is typically modulated so that they vary over time, creating a sweeping effect. For this purpose, phasers usually include a low-frequency oscillator. </p>
+               <p class="modal-text" modal><i><b>A phaser</b></i> is an electronic sound processor used to filter a signal by creating a series of peaks and troughs in the frequency spectrum. The position of the peaks and troughs of the waveform being affected is typically modulated so that they vary over time, creating a sweeping effect. For this purpose, phasers usually include a low-frequency oscillator. </p>
                <h3>How does the phaser work?</h3>
                <p class="modal-text">
                  A phaser uses All-Pass Filters instead of a delay line, but it’s a broadly similar concept and sound to the flanger. The filters create notches when mixed back with the dry signal and an LFO sweeps them through the frequency range. The more “stages” a phaser has the more notches and therefore the more intense the sound will be.
@@ -137,7 +169,7 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Reverb"><span3>Reverb</span3>
               <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>Reverberation</i>, in psychoacoustics and acoustics, is a persistence of sound after the sound is produced.
+               <p class="modal-text" modal><i><b>Reverberation</b></i>, in psychoacoustics and acoustics, is a persistence of sound after the sound is produced.
                A reverberation, or reverb, is created when a sound or signal is reflected causing a large number of reflections to build up and then decay as the sound is absorbed by the surfaces of objects in the space – which could include furniture, people, and air.This is most noticeable when the sound source stops but the reflections continue, decreasing in amplitude, until they reach zero amplitude. </p>
                <h3>How does reverb work?</h3>
                <p class="modal-text">
@@ -150,7 +182,7 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Delay"><span3>Delay</span3>
                <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>Delay</i> is an audio effect and an effects unit which records an input signal to an audio storage medium, and then plays it back after a period of time. The delayed signal may either be played back multiple times, or played back into the recording again, to create the sound of a repeating, decaying echo.
+               <p class="modal-text" modal><i><b>Delay</b></i> is an audio effect and an effects unit which records an input signal to an audio storage medium, and then plays it back after a period of time. The delayed signal may either be played back multiple times, or played back into the recording again, to create the sound of a repeating, decaying echo.
                Delay effects range from a subtle echo effect to a pronounced blending of previous sounds with new sounds.
                Delay effect can be used to create single echoes, as well as a number of other effects. Delays of 35 milliseconds or more create discrete echoes, while those between 15‑34 milliseconds can create a simple chorus or flanging effect.</p>
                <h3>How does delay work?</h3>
@@ -164,7 +196,7 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Echo"><span3>Echo</span3>
                <div class="profile hide">
              <div class="modalP">
-               Echo effect adds a series of repeated, decaying echoes to a sound. (For a single echo, use the Delay effect instead.) You can create effects ranging from a Grand Canyon‑type “Hello‑ello‑llo‑lo‑o” to metallic, clanging drainpipe sounds by varying the delay amount. By equalizing the delays, you can change a room’s characteristic sound from one with reflective surfaces (creating echoes that sound brighter) to one that is almost totally absorptive (creating echoes that sound darker).
+               <p class="modal-text" modal><i><b>Echo</b></i> effect adds a series of repeated, decaying echoes to a sound. (For a single echo, use the Delay effect instead.) You can create effects ranging from a Grand Canyon‑type “Hello‑ello‑llo‑lo‑o” to metallic, clanging drainpipe sounds by varying the delay amount. By equalizing the delays, you can change a room’s characteristic sound from one with reflective surfaces (creating echoes that sound brighter) to one that is almost totally absorptive (creating echoes that sound darker).</p>
              </div>
             </div>
             </li>
@@ -175,9 +207,13 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Equaliser"><span3>Equalization</span3>
               <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>Equalization (or EQ)</i> is the cutting or boosting of a particular frequency (or range of frequencies) in the frequency spectrum.
+               <p class="modal-text" modal><i><b>Equalization (or EQ)</b></i> is the cutting or boosting of a particular frequency (or range of frequencies) in the frequency spectrum.
               Humans can hear audio frequencies roughly between 20 and 20 000 Hertz (Hz). Any sound that human ears perceive sits somewhere in that frequency spectrum.
-              An Equalizer (EQ) divides that spectrum into sections (called ‘bands’) that you use to cut or boost parts of your sound.</p>
+              An Equalizer (EQ) divides that spectrum into sections (called ‘bands’) that you use to cut or boost parts of your sound.</br>
+              <p class="modal-text">They enhance/diminish certain frequency bands whilst leaving others unchanged:</br>
+              • Built using a series of shelving and peak ﬁlters</br>
+              • First or second-order ﬁlters usually employed</p>
+              
               <h3>How does equalization work?</h3>
               <p class="modal-text">
                 EQing is like sculpting: it shapes the existing frequencies of your sound. It doesn’t add new frequencies per se.
@@ -193,7 +229,7 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Compression"><span3>Compression</span3>
               <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>Compression</i> is the reduction of dynamic range—the difference between the loudest and quietest parts of an audio signal. When compression is applied, the quieter parts of the signal are boosted and the louder ones are attenuated.</p>
+               <p class="modal-text" modal><i><b>Compression</b></i> is the reduction of dynamic range—the difference between the loudest and quietest parts of an audio signal. When compression is applied, the quieter parts of the signal are boosted and the louder ones are attenuated.</p>
                <h3>How does compression work?</h3>
                <p class="modal-text">
                  Compressors reduce the gain of your signal (‘GR’ stands for Gain Reduction on your DAW compressor). Compression reduces the dynamic range of a signal. The dynamic range is the difference between the loudest and the quietest parts of a signal.
@@ -205,7 +241,7 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Overdrive"><span3>Overdrive/Distortion</span3>
               <div class="profile hide">
              <div class="modalP">
-               <p class="modal-text"><i>Distortion</i> is an overloading of the audio circuit that causes the signal to clip. It might sound like something you wanna stay away from—but when used right it’s very effective as a creative tool. Bit-crushing is the lo-fi digital equivalent of the distortion effect.</p>
+               <p class="modal-text" modal><i><b>Distortion</b></i> is an overloading of the audio circuit that causes the signal to clip. It might sound like something you wanna stay away from—but when used right it’s very effective as a creative tool. Bit-crushing is the lo-fi digital equivalent of the distortion effect.</p>
                <p class="modal-text">Distortion changes your original signal by pushing the sound to clip and compress. This adds harmonic content and colors the sound in a pleasant way. Bit-crushing works by reducing the resolution of a sound—specifically the sampling rate or the bit rate.</p>
                <h3>How does distortion work?</h3>
                <p class="modal-text">
@@ -221,21 +257,23 @@
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="High-Pass Filters"><span3>High-Pass Filters</span3>
               <div class="profile hide">
              <div class="modalP">
-              <p class="modal-text"><i>LPFs</i> let through all the frequencies below the cutoff frequency—and attenuate those above.</p>
+              <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  A high-pass filter is usually modeled as a linear time-invariant system.
+
+              </p>
              </div>
             </div>
             </li>
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Low-Pass Filters"><span3>Low-Pass Filters</span3>
               <div class="profile hide">
              <div class="modalP">
-              <p class="modal-text"><i>HPFs</i> let through all the frequencies above the cutoff frequency—and attenuate those below.</p>
+              <p class="modal-text" modal><i><b>A low-pass filter</b></i> is a filter that passes signals with a frequency lower than a selected cutoff frequency and attenuates signals with frequencies higher than the cutoff frequency.</p>
              </div>
             </div>
             </li>
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Band-Pass Filters"><span3>Band-Pass Filters</span3>
               <div class="profile hide">
              <div class="modalP">
-              <p class="modal-text"><i>BPFs</i> let through all the frequencies in the determined band, and attenuate everything below and above.</p>
+              <p class="modal-text" modal><i><b>BPFs</b></i> let through all the frequencies in the determined band, and attenuate everything below and above.</p>
              </div>
             </div>
             </li>
@@ -243,7 +281,7 @@
                <div class="profile hide">
              <div class="modalP">
               <p class="modal-text">
-                The steepness or aggressiveness of a filter is determined by its slope. The lower (or gentler) the slope, the less aggressively it attenuates the frequencies below or above its cutoff frequency. A 6dB per octave slope is gentle, whereas a 48dB per octave will have a much more audible effect.
+                The <i>steepness</i> or <i>aggressiveness</i> of a filter is determined by its slope. The lower (or gentler) the slope, the less aggressively it attenuates the frequencies below or above its cutoff frequency. A 6dB per octave slope is gentle, whereas a 48dB per octave will have a much more audible effect.
                 Most filters also have a “Resonance” control, which exaggerates the frequency band around the cutoff. At extreme settings some filters will self-oscillate and can even be played as an additional oscillator.
               </p>
              </div>
@@ -271,7 +309,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <modalP></modalP>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="buttonSec w3-button w3-black w3-round-large" data-dismiss="modal">Close</button>
@@ -282,49 +320,12 @@
   </div>
 </div>
 
-<div class="toast">
-    <div class="toast-header">
-      Toast Header
-    </div>
-    <div class="toast-body">
-      Some text inside the toast body
-    </div>
-  </div>
-</div>
 
+<script type="text/javascript" src="js/open.js"></script>
+<script type="text/javascript" src="js/populate.js"></script>
+<script type="text/javascript" src="js/popover.js"></script>
 
-<script type="text/javascript">
-  $("#types > li").click(function() {
-$(this).find("ul.effect").toggleClass('hide');
-});
-</script>
-
-<script type="text/javascript">
-   $("li[data-target='#exampleModalCenter']").on('click',function(){
-  var infoModal = $('#exampleModalCenter');
-  $(".modal-header").html($(this).attr('data-content'));
-  htmlData = $("li[data-content='" + $(this).attr('data-content') + "']").find('.profile').html();
-  infoModal.find('.modal-body').html(htmlData);  
-});
-</script>
-
-<script>
-$(document).ready(function(){
-  $('a[data-toggle=popover]').popover({
-  html: true,
-  trigger: 'hover',
-  placement: 'bottom',
-
-  content: function(){
-    var url = $(this).data('full');
-    return '<span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="' + url + '" width="350px" height="300px"><br></br><span-popover> In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</span-popver>';}
-});
-  
-});
-</script>
- 
 
 </body>
-
 
 </html>
