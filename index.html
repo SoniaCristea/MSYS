@@ -5,11 +5,11 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
 
@@ -20,10 +20,10 @@
 <svg viewbox="0 0 100 20  ">
   <defs>
     <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="#DDA0DD"/>
+      <stop offset="5%" stop-color="#DA70D6"/>
       <stop offset="95%" stop-color="#dce2f1"/>
     </linearGradient>
-    <pattern id="wave" x="0" y="0" width="250" height="50" patternUnits="userSpaceOnUse">
+    <pattern id="wave" x="0" y="4" width="250" height="50" patternUnits="userSpaceOnUse">
       <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
         <animateTransform
             attributeName="transform"
@@ -36,8 +36,8 @@
       </path>
     </pattern>
   </defs>
-  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#wave)"  fill-opacity="0.8">AUDIO EFFECTS</text>
-  <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#gradient)" fill-opacity="0.5">AUDIO EFFECTS</text>
+  <text text-anchor="middle" x="50" y="18" font-size="10" fill="url(#wave)"  fill-opacity="0.8">AUDIO EFFECTS</text>
+  <text text-anchor="middle" x="50" y="18" font-size="10" fill="url(#gradient)" fill-opacity="0.5">AUDIO EFFECTS</text>
 </svg></div>
 
 <body>
@@ -51,12 +51,12 @@
       <h1>Basic digital audio signal processing</h1>
       <p class="popContent">
         All sounds we hear with our ears are pressure waves in air.
-        Digital recording works differently: it samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. For example, in CD audio, samples are taken 44100 times per second each with 16 bit 
+        Digital recording samples the waveform at evenly-spaced timepoints, representing each sample as a precise number. For example, in CD audio, samples are taken 44100 times per second each with 16 bit 
         <a href="div1" id="pop1" data-toggle="popover" data-trigger="hover" data-full="img/4.png">
         <span-keyword>sample depth.</span-keyword></a>
          Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform:
          <div class="hide" id="div1">
-          <span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="" class="pop" width="350px" height="300px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
+          <span-popover>In digital audio using pulse-code modulation (PCM), bit depth is the number of bits of information in each sample.</span-popover><img src="" class="pop" width="250px" height="250px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
         </div> 
          
         
@@ -65,12 +65,18 @@
         <img class="image" src="img/waveform_digital.png"></img>
         <p class="caption"><i>Figure 1. Sine Waveforms</i></p>
       </div>
-      
+      <p>
+        In a digital audio system, an analog electrical signal representing the sound is converted with an analog-to-digital converter (ADC) into a digital signal, typically using <a href="div3" id="pop3" data-toggle="popover" data-trigger="hover"><span-keyword>pulse-code modulation</span-keyword></a>. This digital signal can then be recorded, edited, modified, and copied using computers, audio playback machines, and other digital tools. When the sound engineer wishes to listen to the recording on headphones or loudspeakers (or when a consumer wishes to listen to a digital sound file), a digital-to-analog converter (DAC) performs the reverse process, converting a digital signal back into an analog signal, which is then sent through an audio power amplifier and ultimately to a loudspeaker. 
+      </p>
+       <div class="hide" id="div3">
+        <span-popover><span-popover-keyword>Pulse-code modulation</span-popover-keyword> is a method used to digitally represent sampled analog signals. It is the standard form of digital audio in computers, compact discs, digital telephony and other digital audio applications. In a PCM stream, the amplitude of the analog signal is sampled regularly at uniform intervals, and each sample is quantized to the nearest value within a range of digital steps. 
+        </span-popover>
+      </div> 
       <p>
         Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <a href="div2" id="pop2" data-toggle="popover" data-trigger="hover"><span-keyword>pitch</span-keyword>
         </a>.
          <div class="hide" id="div2">
-        <span-popover><span>Pitch</span> is the quality of a sound represented by the rate of virbations producing it.
+        <span-popover><span-popover-keyword>Pitch</span-popover-keyword> is the quality of a sound represented by the rate of virbations producing it.
           Also, it can be defined as the <i>highness</i> or <i>lowness</i> of a tone.
         </span-popover>
       </div> 
@@ -137,11 +143,23 @@
 
               <h3>How does Chorus work?</h3>
               <p class="modal-text">Chorus as an electronic effect works in the following way: the chorus audio processor (whether a pedal, effects unit or plugin) makes copies of the original audio signal and applies delay and pitch-modulation (using 
-                <a href="https://en.wikipedia.org/wiki/Low-frequency_oscillation">LFO</a>) to those copies.
-              A stereo chorus does the same, with added <a href="https://en.wikipedia.org/wiki/Panning_(audio)">panning</a> in the delays and offset phase on the LFO. This causes those added copies and modulations to go between your left and right. The effect will sound fuller because of the movement in your stereo field.</p>
-              
-            </div></li>
-          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Flanger"><span3>Flanger</span3>
+                <a href="lfo" data-toggle="popover" data-trigger="hover" rel="popover">LFO</a>) to those copies.
+              A stereo chorus does the same, with added <a href="panning" data-toggle="popover" data-trigger="hover" rel="popover">panning</a> in the delays and offset phase on the LFO. This causes those added copies and modulations to go between your left and right. The effect will sound fuller because of the movement in your stereo field.</p>
+              <div style="display: none" id="lfo">
+                <span-popover>
+                  <span-popover-keyword>Low-frequency oscillation (LFO)</span-popover-keyword> is an electronic frequency which is usually below 20 Hz and creates a rhythmic pulse or sweep.
+                </span-popover>
+              </div>
+
+              <div style="display: none" id="panning">
+                <span-popover>
+                  <span-popover-keyword>Panning</span-popover-keyword> is the distribution of a sound signal into a new stereo or multi-channel sound field determined by a pan control setting. 
+                </span-popover>
+              </div>
+              <script type="text/javascript" src="js/modalPopover.js"></script>
+
+             </div></li>
+          <li id="accordion" data-toggle="modal" data-target="#exampleModalCenter" data-content="Flanger"><span3>Flanger</span3>
             <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Flanger</b></i> is an audio effect produced by mixing two identical signals together, one signal delayed by a small and gradually changing period, usually smaller than 20 milliseconds. This produces a swept comb filter effect: peaks and notches are produced in the resulting frequency spectrum, related to each other in a linear harmonic series. Varying the time delay causes these to sweep up and down the frequency spectrum.</p>
@@ -158,8 +176,15 @@
                <p class="modal-text" modal><i><b>A phaser</b></i> is an electronic sound processor used to filter a signal by creating a series of peaks and troughs in the frequency spectrum. The position of the peaks and troughs of the waveform being affected is typically modulated so that they vary over time, creating a sweeping effect. For this purpose, phasers usually include a low-frequency oscillator. </p>
                <h3>How does the phaser work?</h3>
                <p class="modal-text">
-                 A phaser uses All-Pass Filters instead of a delay line, but it’s a broadly similar concept and sound to the flanger. The filters create notches when mixed back with the dry signal and an LFO sweeps them through the frequency range. The more “stages” a phaser has the more notches and therefore the more intense the sound will be.
+                 A phaser uses <a href="allpass" data-toggle="popover" data-trigger="hover" rel="popover">All-Pass Filters</a> instead of a delay line, but it’s a broadly similar concept and sound to the flanger. The filters create notches when mixed back with the dry signal and an LFO sweeps them through the frequency range. The more “stages” a phaser has the more notches and therefore the more intense the sound will be.
                </p>
+
+               <div style="display: none" id="allpass">
+                 <span-popover>
+                   <span-popover-keyword>All-Pass filters</span-popover-keyword> neither emphasize nor de-emphasize any part of the spectrum. Rather, they displace signals in time as a function of frequency. The time displacement accomplished by an allpass filter is specified by its phase response.
+                 </span-popover>
+               </div>
+               <script type="text/javascript" src="js/modalPopover.js"></script>
              </div>
             </div>
           </li>
@@ -278,20 +303,15 @@
             </div>
             </li>
             <li data-toggle="modal" data-target="#exampleModalCenter" data-content="How to they work?"><span3>How do they work?</span3>
-               <div class="profile hide">
-             <div class="modalP">
-              <p class="modal-text">
-                The <i>steepness</i> or <i>aggressiveness</i> of a filter is determined by its slope. The lower (or gentler) the slope, the less aggressively it attenuates the frequencies below or above its cutoff frequency. A 6dB per octave slope is gentle, whereas a 48dB per octave will have a much more audible effect.
-                Most filters also have a “Resonance” control, which exaggerates the frequency band around the cutoff. At extreme settings some filters will self-oscillate and can even be played as an additional oscillator.
-              </p>
-             </div>
-            </div>
+
             </li>
           </ul>
         </li>
       </ul>
 
 	</div>
+
+  <div class="footer"></div>
 
   <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -309,8 +329,8 @@
         </button>
       </div>
       <div class="modal-body">
-
-      </div>
+  </div>
+    
       <div class="modal-footer">
         <button type="button" class="buttonSec w3-button w3-black w3-round-large" data-dismiss="modal">Close</button>
         <button type="button" class="button icon speaker"></button>

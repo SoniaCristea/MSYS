@@ -12,15 +12,25 @@ body, html {
     margin: 0;
 }
 body .popover{
-	max-width: 400px;
-	padding-right: 20px;
+	max-width: auto;
+	padding: 10px 15px 10px 15px;
+	text-align: justify;
+
 }
 
 .header{
-	border-bottom: 4px double rgba(255,255,255,.25);
+	border-bottom: 4px double rgba(255,255,255,.4);
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-bottom: 45px;
+	margin-bottom: 70px;
+}
+
+.footer{
+	margin-top: 70px;
+	border-bottom: 4px double rgba(255,255,255,.4);
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 100px;
 }
 
 svg{
@@ -28,10 +38,9 @@ svg{
 	max-width:700px;
 	height:150px;
 	position: relative;
+	margin-top: -25px;
 	display: inline-block;
 	margin-left: -3%;
-	padding-top: : 30px;
-
 }
 
 
@@ -80,7 +89,7 @@ span-popover{
 	font-size: 12px;
 	text-indent: 20px;
 	text-align: justify;
-
+	font-family: Times New Roman, sans-serif;
 }
 
 h3{
@@ -99,8 +108,15 @@ h3{
 
 span{
 	font-weight: bold;
+	color: yellow;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-indent: 40px;
+	font-family: Times New Roman, sans-serif;
+}
+
+span-popover-keyword{
+	font-weight: bold;
 	color: red;
-	text-decoration-color: red;
 	text-indent: 40px;
 	font-family: Times New Roman, sans-serif;
 }
@@ -111,6 +127,7 @@ span-keyword{
 	text-decoration-color: #4B0082;
 	font-family: Times New Roman, sans-serif;
 }
+
 
 /* LIST */
 
@@ -125,7 +142,6 @@ li{
 
 p a{
 	color: #3149db;
-	text-decoration: underline;
 	text-decoration-color: #4B0082;
 }
 .text-span{
@@ -166,11 +182,10 @@ span3{
 	position: relative;
 	margin-top: 10px;
 	margin-left: 5%;
-	background-color: hsla(290,60%,90%,0.7);
+	background-color: hsla(280,60%,77%,0.7);
 	display: inline-block;
 	padding: 20px 50px 30px 50px;
 	overflow-y: auto;
-	margin-bottom: 40px;
 }
 
 .img-caption{
@@ -182,7 +197,7 @@ span3{
 
 
 .list{
-	background-color: hsla(290,60%,90%,0.7);
+	background-color: hsla(280,60%,77%,0.7);
 	margin-top: 8px;	
 	margin-right: 5%;
 	border-radius: 15px;
@@ -211,6 +226,8 @@ li{
 
 .modal {
   text-align: center;
+  width: auto;
+  height: auto;
   padding: 0!important;
 }
 
@@ -245,7 +262,7 @@ li{
 }
 
 .modal-body{
-	height: 250px;
+	height: auto;
 	overflow-y: scroll;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -260,6 +277,8 @@ li{
     margin:auto;
     padding-bottom: 15px;
     padding-top: 15px;
+    width: auto;
+
 }
 
 .button{
