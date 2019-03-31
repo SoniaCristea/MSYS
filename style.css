@@ -21,7 +21,7 @@ body .popover{
 }
 
 .header{
-	border-bottom: 4px double rgba(255,255,255,.4);
+	border-bottom: 4px double #e4e5ee;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 70px;
@@ -43,22 +43,21 @@ svg{
 	margin-top: -25px;
 	display: inline-block;
 	margin-left: -3%;
+
 }
 
 
 /* TEXT PROPERTIES */
 h2 {
- font-size: 220px;
+ font-size: 20px;
  line-height: 20px;
  font-family: Times New Roman, sans-serif;
  font-weight: bold;
  text-align: center;
  vertical-align: middle;
  padding-bottom: 15px;
- text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
- 
- /*text stroke*/
- -webkit-text-stroke: 3px;	
+ text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
 }
 
 text{
@@ -73,10 +72,8 @@ h1{
  font-family: Times New Roman, sans-serif;
  font-weight: bold;
  padding-bottom: 15px;
- text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
- 
- /*text stroke*/
- -webkit-text-stroke: 4px;	
+ text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+ font-weight: bold;
 }
 
 p{
@@ -84,29 +81,33 @@ p{
 	color: black;
 	text-indent: 30px;
 	text-align: justify;
+	font-weight: bold;
 	font-family: Times New Roman, sans-serif;
+	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 span-popover{
 	font-size: 12px;
 	text-indent: 15px;
 	text-align: justify;
-
 	font-family: Times New Roman, sans-serif;
 }
 
 h3{
-	font-size: 15px;
+	font-size: 20px;
 	text-indent: 40px;
-	font-family: Times New Roman, sans-serif;
 	font-weight: bold;
-	-webkit-text-stroke: 2px rgba(0, 0, 0, .6);
+	color: black;
+	font-family: Times New Roman, sans-serif;
+	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .caption{
 	font-size: 14px;
 	font-family: Times New Roman;
 	text-align: center;
+	font-weight: bold;
+	color: black;
 }
 
 span{
@@ -165,11 +166,16 @@ p a{
 span2{
 	margin-left: -25px;
 	font-size: 17px;
+	font-weight: bold;
+	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 span3{
 	margin-left: -25px;
 	font-size: 17px;
+	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	font-weight: bold;
+
 }
 
 /* DIV PROPERTIES */
@@ -268,7 +274,6 @@ li{
 }
 
 .modal-body{
-	height: 100%;
 	overflow-y: scroll;
 	margin-left: 15px;
 	margin-right: 15px;
