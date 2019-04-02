@@ -20,5 +20,10 @@
        		isPlaying = true;
        	}
        });
+
+  $('body').on('hidden.bs.modal', '.modal', function () {
+    $('audio').trigger('pause');
+  });
+  
 });
  
