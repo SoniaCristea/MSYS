@@ -56,23 +56,26 @@
         <span-keyword>sample depth.</span-keyword></a>
          Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform:
          <div class="hide popover" id="div1">
-          <span-popover>Bit depth is the number of bits of information in each sample  and it directly corresponds to the resolution of each sample.Bit depth is only meaningful in reference to a PCM digital signal. 
-          </span-popover><img src="" class="pop" width="300px" height="250px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
-        </div> 
-         
-        
-      </p> 
+          <span-popover>Bit depth is the number of bits of information in each sample  and it directly corresponds to the resolution of each sample.Bit depth is only meaningful in reference to a PCM digital signal.</span-popover>
+          <img src="" class="pop" width="300px" height="250px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
+        </div> </p> 
+
+      <!-- Image + caption -->
+
       <div class="img-caption">
         <img class="image" src="img/waveform_digital.png"></img>
         <p class="caption"><i>Figure 1. Sine Waveforms</i></p>
       </div>
+
       <p>
         In a digital audio system, an analog electrical signal representing the sound is converted with an analog-to-digital converter (ADC) into a digital signal, typically using <a href="div3" id="pop3" data-toggle="popover" data-trigger="hover"><span-keyword>pulse-code modulation</span-keyword></a>. This digital signal can then be recorded, edited, modified, and copied using computers, audio playback machines, and other digital tools. When the sound engineer wishes to listen to the recording on headphones or loudspeakers (or when a consumer wishes to listen to a digital sound file), a digital-to-analog converter (DAC) performs the reverse process, converting a digital signal back into an analog signal, which is then sent through an audio power amplifier and ultimately to a loudspeaker. 
       </p>
        <div class="hide" id="div3">
-        <span-popover><span-popover-keyword>Pulse-code modulation</span-popover-keyword> is a method used to digitally represent sampled analog signals. It is the standard form of digital audio in computers, compact discs, digital telephony and other digital audio applications. In a PCM stream, the amplitude of the analog signal is sampled regularly at uniform intervals, and each sample is quantized to the nearest value within a range of digital steps. 
+        <span-popover>
+          <span-popover-keyword>Pulse-code modulation</span-popover-keyword> is a method used to digitally represent sampled analog signals. It is the standard form of digital audio in computers, compact discs, digital telephony and other digital audio applications. In a PCM stream, the amplitude of the analog signal is sampled regularly at uniform intervals, and each sample is quantized to the nearest value within a range of digital steps. 
         </span-popover>
       </div> 
+
       <p>
         Digital audio can be edited and mixed without introducing any additional noise. In addition, many digital effects can be applied to digitized audio recordings, for example, to simulate reverberation, enhance certain frequencies, or shift the <a href="div2" id="pop2" data-toggle="popover" data-trigger="hover"><span-keyword>pitch</span-keyword>
         </a>.
@@ -107,7 +110,8 @@
         
 
     <p>
-      The general form of the <span>sine</span> wave we shall use is as follows: </p>
+      The general form of the <span>sine</span> wave we shall use is as follows: 
+    </p>
        <p class="text-span"><i>y = A.sin(2π.n.Fw/Fs)</i></p>
        <p>where:</p>
        <p class="text-span2"><i>A</i> is the <i>amplitude</i> of the wave,</p>
@@ -126,7 +130,8 @@
        <p class="text-span2"><span>Frequency</span> of a wave is the number of waves that pass by each second</p>
        <p class="text-span2"><span>Amplitude</span> is the height of the wave and often related to power.</p>
        <p class="text-span2"><span>Phase</span> involves the relationship between the position of the amplitude crests and troughs of two waveforms.</p>
-       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html"><u>link</u></a></p>
+       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following 
+       <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html"><u>link</u></a></p>
        <br></br>
 	</div>
 
@@ -140,7 +145,7 @@
             <audio class="hide" id="myAudio1">
               <source src="audio/Beethoven-Fur Elise_chorus.mp3" type="audio/mp3">
              </audio>
-            <div class="profile hide">
+            <div class="profile hide" id="flip">
              <div class="modalP">
               <p class="modal-text" modal><i><b>Chorus</b></i> is an effect obtained when similar sounds with slight variations in tuning and timing overlap and are heard as one.
               It happens naturally when multiple sources make a similar sound overlap. Think of a real life choir singing multiple parts at the same time. They all overlap to form a distinct sound. The chorus effect does the same thing!</p>
@@ -155,7 +160,6 @@
                   <span-popover-keyword>Low-frequency oscillation (LFO)</span-popover-keyword> is an electronic frequency which is usually below 20 Hz and creates a rhythmic pulse or sweep.
                 </span-popover>
               </div>
-
 
               <div style="display: none" id="panning">
                 <span-popover>
@@ -329,9 +333,7 @@
                </audio>
               <div class="profile hide">
              <div class="modalP">
-              <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  A high-pass filter is usually modeled as a linear time-invariant system.
-
-              </p>
+              <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  A high-pass filter is usually modeled as a linear time-invariant system.</p>
              </div>
             </div>
             </li>
@@ -355,13 +357,10 @@
              </div>
             </div>
             </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="How to they work?"><span3>How do they work?</span3>
-
-            </li>
+            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="How to they work?"><span3>How do they work?</span3></li>
           </ul>
         </li>
       </ul>
-
 	</div>
 
   <div class="footer"></div>
@@ -369,11 +368,7 @@
   <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
   aria-hidden="true">
-
-  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
   <div class="modal-dialog modal-dialog-centered" role="document">
-
-
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
@@ -381,13 +376,10 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-  </div>
-    
+      <div class="modal-body"></div>
       <div class="modal-footer">
         <button type="button" class="buttonSec w3-button w3-black w3-round-large" data-dismiss="modal">Close</button>
         <button type="button" id="btn" class="button icon speaker"></button>
-
       </div>
     </div>
   </div>

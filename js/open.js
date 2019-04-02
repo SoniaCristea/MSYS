@@ -1,4 +1,4 @@
- $("#types > li").click(function() {
-$(this).find("ul.effect").toggleClass('hide');
+$("#types > li").click(function() {
+	$(this).find("ul.effect").toggleClass('hide');
 });
 

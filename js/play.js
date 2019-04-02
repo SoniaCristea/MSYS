@@ -1,29 +1,27 @@
-
   $("li[data-target='#exampleModalCenter']").on('click',function(){
   var infoModal = $('#exampleModalCenter');
   var isPlaying = false;
-  // $(".modal-header").html($(this).attr('data-content'));
-  // htmlData = $("li[data-content='" + $(this).attr('data-content') + "']").find('.profile').html();
-  // infoModal.find('.modal-body').html(htmlData); 
+
   id = $(this).attr('id');
   song = document.getElementById("myAudio"+id);
 
   $("#btn").click(function(){
-  	
-  		if (isPlaying) {
 
-  			song.pause();
-       		isPlaying = false;
-       	} else{
+    if (isPlaying) {
 
-       		song.play();
-       		isPlaying = true;
-       	}
-       });
+      song.pause();
+      isPlaying = false;
+      song.currentTime = 0;
+    } else{
+
+      song.play();
+      isPlaying = true;
+    }
+  });
 
   $('body').on('hidden.bs.modal', '.modal', function () {
     $('audio').trigger('pause');
   });
-  
+
 });
  

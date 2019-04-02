@@ -90,8 +90,10 @@ span-popover{
 	font-size: 12px;
 	text-indent: 15px;
 	text-align: justify;
+	text-align-last: start;
 	font-family: Times New Roman, sans-serif;
 }
+
 
 h3{
 	font-size: 20px;
@@ -127,10 +129,11 @@ span-popover-keyword{
 
 span-keyword{
 	font-weight: bold;
-	color: #4B0082;
-	text-decoration-color: #4B0082;
+	color: yellow;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-family: Times New Roman, sans-serif;
 }
+
 
 
 /* LIST */
