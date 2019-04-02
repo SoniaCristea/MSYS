@@ -2,5 +2,9 @@
   var infoModal = $('#exampleModalCenter');
   $(".modal-header").html($(this).attr('data-content'));
   htmlData = $("li[data-content='" + $(this).attr('data-content') + "']").find('.profile').html();
-  infoModal.find('.modal-body').html(htmlData);  
+  infoModal.find('.modal-body').html(htmlData); 
+  // id = $(this).attr('id');
+  // song = document.getElementById("myAudio"+id);
+  // song.play();
 });
+

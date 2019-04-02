@@ -136,7 +136,10 @@
      <ul id="types">
         <li><span2>Modulation effects</span2>
         <ul class="effect hide">
-          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Chorus"><span3>Chorus</span3>
+          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Chorus" id="1"><span3>Chorus</span3>
+            <audio class="hide" id="myAudio1">
+              <source src="audio/Beethoven-Fur Elise_chorus.mp3" type="audio/mp3">
+             </audio>
             <div class="profile hide">
              <div class="modalP">
               <p class="modal-text" modal><i><b>Chorus</b></i> is an effect obtained when similar sounds with slight variations in tuning and timing overlap and are heard as one.
@@ -146,6 +149,7 @@
               <p class="modal-text">Chorus as an electronic effect works in the following way: the chorus audio processor (whether a pedal, effects unit or plugin) makes copies of the original audio signal and applies delay and pitch-modulation (using 
                 <a href="lfo" data-toggle="popover" data-trigger="hover" rel="popover">LFO</a>) to those copies.
               A stereo chorus does the same, with added <a href="panning" data-toggle="popover" data-trigger="hover" rel="popover">panning</a> in the delays and offset phase on the LFO. This causes those added copies and modulations to go between your left and right. The effect will sound fuller because of the movement in your stereo field.</p>
+
               <div style="display: none" id="lfo">
                 <span-popover>
                   <span-popover-keyword>Low-frequency oscillation (LFO)</span-popover-keyword> is an electronic frequency which is usually below 20 Hz and creates a rhythmic pulse or sweep.
@@ -161,7 +165,10 @@
               <script type="text/javascript" src="js/modalPopover.js"></script>
 
              </div></li>
-          <li id="accordion" data-toggle="modal" data-target="#exampleModalCenter" data-content="Flanger"><span3>Flanger</span3>
+          <li id="2" data-toggle="modal" data-target="#exampleModalCenter" data-content="Flanger"><span3>Flanger</span3>
+            <audio class="hide" id="myAudio2">
+              <source src="audio/Beethoven-Fur Elise_flanger.mp3" type="audio/mp3">
+             </audio>
             <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Flanger</b></i> is an audio effect produced by mixing two identical signals together, one signal delayed by a small and gradually changing period, usually smaller than 20 milliseconds. This produces a swept comb filter effect: peaks and notches are produced in the resulting frequency spectrum, related to each other in a linear harmonic series. Varying the time delay causes these to sweep up and down the frequency spectrum.</p>
@@ -172,7 +179,10 @@
              </div>
             </div>
           </li>
-          <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Phaser"><span3>Phaser</span3>
+          <li id="3" data-toggle="modal" data-target="#exampleModalCenter" data-content="Phaser"><span3>Phaser</span3>
+            <audio class="hide" id="myAudio3">
+              <source src="audio/Beethoven-Fur Elise_phaser(preset-LedZeppelin).mp3" type="audio/mp3">
+             </audio>
             <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>A phaser</b></i> is an electronic sound processor used to filter a signal by creating a series of peaks and troughs in the frequency spectrum. The position of the peaks and troughs of the waveform being affected is typically modulated so that they vary over time, creating a sweeping effect. For this purpose, phasers usually include a low-frequency oscillator. </p>
@@ -190,7 +200,10 @@
              </div>
             </div>
           </li>
-           <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Pitch"><span3>Pitch</span3>
+           <li id="4" data-toggle="modal" data-target="#exampleModalCenter" data-content="Pitch"><span3>Pitch</span3>
+             <audio class="hide" id="myAudio4">
+              <source src="audio/Beethoven-Fur Elise_pitchShift.mp3" type="audio/mp3">
+             </audio>
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Pitch shifting</b></i> is a sound recording technique in which the original pitch of a sound is raised or lowered. Effects units that raise or lower pitch by a pre-designated musical interval (transposition) are called pitch shifters or pitch benders. </p>
@@ -204,7 +217,10 @@
 
         <li><span2>Time-based effects</span2>
           <ul class="effect hide">
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Reverb"><span3>Reverb</span3>
+            <li id="5" data-toggle="modal" data-target="#exampleModalCenter" data-content="Reverb"><span3>Reverb</span3>
+               <audio class="hide" id="myAudio5">
+                  <source src="audio/Beethoven-Fur Elise_reverb.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Reverberation</b></i>, in psychoacoustics and acoustics, is a persistence of sound after the sound is produced.
@@ -217,7 +233,10 @@
              </div>
             </div>
           </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Delay"><span3>Delay</span3>
+            <li id="6" data-toggle="modal" data-target="#exampleModalCenter" data-content="Delay"><span3>Delay</span3>
+              <audio class="hide" id="myAudio6">
+                  <source src="audio/Beethoven-Fur Elise_delay.mp3" type="audio/mp3">
+               </audio>
                <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Delay</b></i> is an audio effect and an effects unit which records an input signal to an audio storage medium, and then plays it back after a period of time. The delayed signal may either be played back multiple times, or played back into the recording again, to create the sound of a repeating, decaying echo.
@@ -231,7 +250,10 @@
              </div>
             </div>
             </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Echo"><span3>Echo</span3>
+            <li id="7" data-toggle="modal" data-target="#exampleModalCenter" data-content="Echo"><span3>Echo</span3>
+              <audio class="hide" id="myAudio7">
+                  <source src="audio/Beethoven-Fur Elise_echo.mp3" type="audio/mp3">
+               </audio>
                <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Echo</b></i> effect adds a series of repeated, decaying echoes to a sound. (For a single echo, use the Delay effect instead.) You can create effects ranging from a Grand Canyon‑type “Hello‑ello‑llo‑lo‑o” to metallic, clanging drainpipe sounds by varying the delay amount. By equalizing the delays, you can change a room’s characteristic sound from one with reflective surfaces (creating echoes that sound brighter) to one that is almost totally absorptive (creating echoes that sound darker).</p>
@@ -242,7 +264,10 @@
         </li>
         <li><span2>Spectral effects</span2>
           <ul class="effect hide">
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Equaliser"><span3>Equalization</span3>
+            <li id="8" data-toggle="modal" data-target="#exampleModalCenter" data-content="Equaliser"><span3>Equalization</span3>
+              <audio class="hide" id="myAudio8">
+                  <source src="audio/Beethoven-Fur Elise_eq.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Equalization (or EQ)</b></i> is the cutting or boosting of a particular frequency (or range of frequencies) in the frequency spectrum.
@@ -264,7 +289,10 @@
         </li>
         <li><span2>Dynamic effects</span2>
           <ul class="effect hide">
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Compression"><span3>Compression</span3>
+            <li id="9" data-toggle="modal" data-target="#exampleModalCenter" data-content="Compression"><span3>Compression</span3>
+              <audio class="hide" id="myAudio9">
+                  <source src="audio/Beethoven-Fur Elise_compression.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Compression</b></i> is the reduction of dynamic range — the difference between the loudest and quietest parts of an audio signal. When compression is applied, the quieter parts of the signal are boosted and the louder ones are attenuated.</p>
@@ -276,7 +304,10 @@
              </div>
             </div>
             </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Overdrive/Distortion"><span3>Overdrive/Distortion</span3>
+            <li id="10" data-toggle="modal" data-target="#exampleModalCenter" data-content="Overdrive/Distortion"><span3>Overdrive/Distortion</span3>
+              <audio class="hide" id="myAudio10">
+                  <source src="audio/Beethoven-Fur Elise_distortion.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
               <p class="modal-text"><i><b>Overdrive</b></i>  - audio at a low input level is driven by higher input levels in a non-linear curve characteristic. For overdrive, Symmetrical soft clipping of input values has to be performed.  </p>
@@ -292,7 +323,10 @@
         </li>
         <li><span2>Filters</span2>
           <ul class="effect hide">
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="High-Pass Filters"><span3>High-Pass Filters</span3>
+            <li id="11" data-toggle="modal" data-target="#exampleModalCenter" data-content="High-Pass Filters"><span3>High-Pass Filters</span3>
+               <audio class="hide" id="myAudio11">
+                  <source src="audio/Beethoven-Fur Elise_hpf.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
               <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  A high-pass filter is usually modeled as a linear time-invariant system.
@@ -301,14 +335,20 @@
              </div>
             </div>
             </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Low-Pass Filters"><span3>Low-Pass Filters</span3>
+            <li id="12" data-toggle="modal" data-target="#exampleModalCenter" data-content="Low-Pass Filters"><span3>Low-Pass Filters</span3>
+               <audio class="hide" id="myAudio12">
+                  <source src="audio/Beethoven-Fur Elise_lpf.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
               <p class="modal-text" modal><i><b>A low-pass filter</b></i> is a filter that passes signals with a frequency lower than a selected cutoff frequency and attenuates signals with frequencies higher than the cutoff frequency.</p>
              </div>
             </div>
             </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="Band-Pass Filters"><span3>Band-Pass Filters</span3>
+            <li id="13" data-toggle="modal" data-target="#exampleModalCenter" data-content="Band-Pass Filters"><span3>Band-Pass Filters</span3>
+               <audio class="hide" id="myAudio13">
+                  <source src="audio/Beethoven-Fur Elise_bdf.mp3" type="audio/mp3">
+               </audio>
               <div class="profile hide">
              <div class="modalP">
               <p class="modal-text" modal><i><b>BPFs</b></i> let through all the frequencies in the determined band, and attenuate everything below and above.</p>
@@ -346,7 +386,7 @@
     
       <div class="modal-footer">
         <button type="button" class="buttonSec w3-button w3-black w3-round-large" data-dismiss="modal">Close</button>
-        <button type="button" class="button icon speaker"></button>
+        <button type="button" id="btn" class="button icon speaker"></button>
 
       </div>
     </div>
@@ -357,7 +397,7 @@
 <script type="text/javascript" src="js/open.js"></script>
 <script type="text/javascript" src="js/populate.js"></script>
 <script type="text/javascript" src="js/popover.js"></script>
-
+<script type="text/javascript" src="js/play.js"></script>
 
 </body>
 
