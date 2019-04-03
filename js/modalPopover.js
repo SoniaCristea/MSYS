@@ -1,14 +1,15 @@
- $(document).ready(function(){
-    $('a[rel=popover]').popover({
-        html: true,
-        trigger: 'hover',
-        placement: position,
-        content: function(){
-          var id = $(this).attr("href");
-          var html = $('div[id="' + id + '"]').html();
-          return html;
-        }
-      });
+$(document).ready(function(){
+  $('a[rel=popover]').popover({
+
+    html: true,
+    trigger: 'hover',
+    placement: position,
+    content: function(){
+      var id = $(this).attr("href");
+      var html = $('div[id="' + id + '"]').html();
+      return html;
+    }
+  });
 });
 
 
