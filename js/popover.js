@@ -23,7 +23,7 @@ function position(context, source) {
   if (position.left > 420) {
     return "left";
   }
-  if (position.left < 420) {
+  if (position.left < 400) {
     return "right";
   }
   if (position.top < 200){

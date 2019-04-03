@@ -14,10 +14,11 @@ body, html {
 body .popover{
 	width: 325px;
 	height: auto;
+	position: fixed;
 	max-width: 400px;
 	padding: 10px 15px 10px 15px;
 	text-align: justify;
-
+	z-index: 10px;
 }
 
 .header{
@@ -40,7 +41,7 @@ svg{
 	max-width:700px;
 	height:150px;
 	position: relative;
-	margin-top: -25px;
+	margin-top: -40px;
 	display: inline-block;
 	margin-left: -3%;
 
@@ -55,8 +56,8 @@ h2 {
  text-align: center;
  vertical-align: middle;
  padding-bottom: 15px;
- color:#051272 !important;
- text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+ color:#431666 !important;
+ text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 }
 
@@ -66,14 +67,14 @@ text{
 
 
 h1{
- font-size: 43px !important;
+ font-size: 40px !important;
  line-height: 48px;
  padding-bottom:15px;
  font-family: 'Times New Roman', sans-serif;
  font-weight: bold;
  padding-bottom: 15px;
- color:#051272 !important;
- text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+ color:#431666 !important;
+ text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 p{
@@ -102,12 +103,12 @@ span-popover{
 
 
 h3{
-	font-size: 23px !important;
+	font-size: 27px !important;
 	text-indent: 40px;
 	font-weight: bold;
 	font-family: Times New Roman, sans-serif;
-	color:#051272 !important;
- 	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	color:#431666 !important;
+ 	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -115,6 +116,7 @@ h3{
 	font-size: 14px;
 	font-family: Times New Roman;
 	text-align: center;
+	margin-right: 30px;
 	color: white;
 	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -153,18 +155,30 @@ li{
 	text-indent: 30px;
 	text-align: justify;
 	font-family: Times New Roman, sans-serif;
+	color:white;
 }
 
 p a{
-	color: yellow;
+	color: #5eadc4;
+	font-weight: bold;
+}
 
+keyword{
+	font-size: 17px;
+	color: black;
+	font-weight: bold;
+	text-shadow: none;
+	font-family: Lucida Sans;
 }
 .text-span{
 	
-	font-size: 18px;
+	font-size: 20px;
 	text-align: center;
-	/*color: black;*/
-	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	margin-right: 30px;
+	margin-top: 10px;
+	color: black;
+	font-weight: bold;
+	text-shadow: none;
 	font-size: 17px;
 	font-family: Times New Roman;
 
@@ -172,7 +186,6 @@ p a{
 
 .text-span2{
 	text-indent:10%;
-	/*color:black;*/
 	color: white;
 	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-size: 17px;
@@ -182,7 +195,6 @@ span2{
 	margin-left: -25px;
 	font-size: 17px;
 	font-weight: bold;
-	/*text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 	color: white;
 	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -190,11 +202,10 @@ span2{
 span3{
 	margin-left: -25px;
 	font-size: 17px;
-	/*text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 	color: white;
 	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-weight: bold;
-
+	
 }
 
 /* DIV PROPERTIES */
@@ -203,7 +214,16 @@ span3{
   display: none;
 }
 
-
+.equation{
+	border-radius: 7px;
+	border-style: solid;
+  	border-color: white;
+  	display: inline-block;
+  	margin-left: 37%;
+  	background-color: white;
+  	margin-right: 30%;
+  	text-align: center;
+}
 
 .content{
 	border-radius: 15px;
@@ -223,6 +243,7 @@ span3{
 	width: auto;
 	color: black;
 	padding-bottom: 15px;
+	text-align: center;
 }
 
 
@@ -235,6 +256,8 @@ span3{
 	height: 50%;
 	float: right;
 	overflow-y: auto;
+	position: sticky;
+  	top: 20px;
 }
 
 
@@ -259,12 +282,17 @@ li{
   width: auto;
   height: auto;
   padding: 0!important;
+  position: relative;
 }
 
 .modal-text{
 	font-size: 15px;
 	text-indent: 25px;
 	padding-bottom: 17px;
+	color: black;
+	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	font-weight: normal;
+	font-family: Zapfhumnst Dm BT, serif;
 }
 
 .modal:before {
