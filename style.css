@@ -49,12 +49,13 @@ svg{
 
 /* TEXT PROPERTIES */
 h2 {
- font-size: 20px;
+ font-size: 25px !important;
  line-height: 20px;
  font-weight: bold;
  text-align: center;
  vertical-align: middle;
  padding-bottom: 15px;
+ color:#051272 !important;
  text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 
 }
@@ -65,15 +66,14 @@ text{
 
 
 h1{
- font-size: 25px;
+ font-size: 43px !important;
  line-height: 48px;
  padding-bottom:15px;
  font-family: 'Times New Roman', sans-serif;
  font-weight: bold;
  padding-bottom: 15px;
- color:green;
+ color:#051272 !important;
  text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-
 }
 
 p{
@@ -102,14 +102,12 @@ span-popover{
 
 
 h3{
-	font-size: 20px;
+	font-size: 23px !important;
 	text-indent: 40px;
 	font-weight: bold;
 	font-family: Times New Roman, sans-serif;
-	/*color: black;
-	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
-	color: white;
-	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color:#051272 !important;
+ 	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 
@@ -139,11 +137,8 @@ span-popover-keyword{
 span-keyword{
 	font-weight: bold;
 	color: yellow;
-<<<<<<< HEAD
 	text-decoration-color: #000000;
-=======
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
->>>>>>> 31771308e5ed67694ddb3e14f97eb08d566319ff
 	font-family: Times New Roman, sans-serif;
 }
 
