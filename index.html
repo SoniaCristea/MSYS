@@ -56,9 +56,9 @@
         <span-keyword>sample depth.</span-keyword></a>
          Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform:
          <div class="hide popover" id="div1">
-          <span-popover>Bit depth is the number of bits of information in each sample  and it directly corresponds to the resolution of each sample.Bit depth is only meaningful in reference to a PCM digital signal.</span-popover>
-          <img src="" class="pop" width="300px" height="250px"><br></br><p class="caption"><i>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</i></p>
-        </div> </p> 
+          <span-popover>Bit depth is the number of bits of information in each sample  and it directly corresponds to the resolution of each sample. Bit depth is only meaningful in reference to a PCM digital signal.</span-popover>
+          <img src="" class="pop" width="300px" height="250px"><br></br><span-popover>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</span-popover>
+        </div></p>
 
       <!-- Image + caption -->
 
@@ -279,7 +279,7 @@
              <div class="modalP">
                <p class="modal-text" modal><i><b>Equalization (or EQ)</b></i> is the cutting or boosting of a particular frequency (or range of frequencies) in the frequency spectrum.
               Humans can hear audio frequencies roughly between 20 and 20 000 Hertz (Hz). Any sound that human ears perceive sits somewhere in that frequency spectrum.
-              An Equalizer (EQ) divides that spectrum into sections (called ‘bands’) that you use to cut or boost parts of your sound.</br>
+              An Equalizer (EQ) divides that spectrum into sections (called ‘bands’) that you use to cut or boost parts of your sound.</p>
               <p class="modal-text">They enhance/diminish certain frequency bands whilst leaving others unchanged:</br>
               • Built using a series of shelving and peak ﬁlters</br>
               • First or second-order ﬁlters usually employed</p>
@@ -321,7 +321,9 @@
                <p class="modal-text" modal><i><b>Distortion</b></i> is an overloading of the audio circuit that causes the signal to clip. It might sound like something you wanna stay away from—but when used right it’s very effective as a creative tool. Bit-crushing is the lo-fi digital equivalent of the distortion effect.</p>
                <h3>How does distortion work?</h3>
                <p class="modal-text">
-                 Distortion changes your original signal by pushing the sound to clip and compress. This adds harmonic content and colors the sound in a pleasant way. Bit-crushing works by reducing the resolution of a sound—specifically the sampling rate or the bit rate.
+                 Distortion changes your original signal by pushing the sound to clip and compress. This adds harmonic content and colors the sound in a pleasant way. Bit-crushing works by reducing the resolution of a sound—specifically the sampling rate or the bit rate.</br>
+                 <p class="modal-text">Distortion and overdrive are forms of audio signal processing used to alter the sound of amplified electric musical instruments, usually by increasing their gain, producing a "fuzzy", "growling", or "gritty" tone.</p>
+
                </p>
              </div>
             </div>
@@ -336,7 +338,17 @@
                </audio>
               <div class="profile hide">
              <div class="modalP">
-              <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  A high-pass filter is usually modeled as a linear time-invariant system.</p>
+              <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  The amount of attenuation for each frequency depends on the filter design. A high-pass filter is usually modeled as a linear time-invariant system. It is sometimes called a low-cut filter or bass-cut filter. High-pass filters have many uses, such as blocking DC from circuitry sensitive to non-zero average voltages or radio frequency devices. They can also be used in conjunction with a low-pass filter to produce a bandpass filter. </p>
+              <p class="modal-text">
+                A highpass filter does exactly the opposite to a lowpass filter, i.e. it attenuates the low frequency components of a spectrum while ‘passing’ the high frequencies within a specified range. Some examples of high-pass filters include:</br>
+
+                (i) <b>The ideal high-pass filter</b></br>
+                <img class="modal-image" src="img/ideal_hpf.png"> </br>
+                (ii) <b>The Gaussian high-pass folder</b></br>
+                <img class="modal-image" src="img/gaussian_hpf.png"></br>
+                (iii) <b>The Butterworth high-pass filter</b></br>
+                <img class="modal-image" src="img/butterworth_hpf.png">
+              </p>
              </div>
             </div>
             </li>
@@ -347,6 +359,13 @@
               <div class="profile hide">
              <div class="modalP">
               <p class="modal-text" modal><i><b>A low-pass filter</b></i> is a filter that passes signals with a frequency lower than a selected cutoff frequency and attenuates signals with frequencies higher than the cutoff frequency.</p>
+              <p class="modal-text">
+                A low pass filter is a filter which passes low-frequency signals and blocks, or impedes, high-frequency signals. 
+               In other words, low-frequency signals go through much easier and with less resistance and high-frequency signals have a much harder getting through, which is why it's a low pass filter.</p></br>
+               <img class="modal-image" src="img/lpf.png">
+              <p class="modal-text">
+                Low pass filters can be constructed using resistors with either capacitors or inductors. A low pass filter composed of a resistor and a capacitor is called a low pass RC filter. And a low pass filter with a resistor and an inductor is called a low pass RL filter. </br>
+              </p>
              </div>
             </div>
             </li>
@@ -357,10 +376,16 @@
               <div class="profile hide">
              <div class="modalP">
               <p class="modal-text" modal><i><b>BPFs</b></i> let through all the frequencies in the determined band, and attenuate everything below and above.</p>
+              <p class="modal-text">
+                Band Pass Filters can be used to isolate or filter out certain frequencies that lie within a particular band or range of frequencies. The cut-off frequency or ƒc point in a simple RC passive filter can be accurately controlled using just a single resistor in series with a non-polarized capacitor, and depending upon which way around they are connected, we have seen that either a Low Pass or a High Pass filter is obtained.
+              </p>
+              <p class="modal-text">
+                By connecting or “cascading” together a single Low Pass Filter circuit with a High Pass Filter circuit, we can produce another type of passive RC filter that passes a selected range or “band” of frequencies that can be either narrow or wide while attenuating all those outside of this range. This new type of passive filter arrangement produces a frequency selective filter known commonly as a Band Pass Filter or BPF for short.</br>
+                <img class="modal-image" src="img/bpf.png">
+              </p>
              </div>
             </div>
             </li>
-            <li data-toggle="modal" data-target="#exampleModalCenter" data-content="How to they work?"><span3>How do they work?</span3></li>
           </ul>
         </li>
       </ul>
