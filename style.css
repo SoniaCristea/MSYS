@@ -246,6 +246,12 @@ span3{
 	text-align: center;
 }
 
+.modal-image{
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	vertical-align: middle;
+}
 
 .list{
 	background-color: hsla(280,60%,77%,0.7);
@@ -288,7 +294,7 @@ li{
 .modal-text{
 	font-size: 15px;
 	text-indent: 25px;
-	padding-bottom: 17px;
+	
 	color: black;
 	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 	font-weight: normal;
