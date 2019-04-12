@@ -18,6 +18,7 @@ body .popover{
 	max-width: 400px;
 	padding: 10px 15px 10px 15px;
 	text-align: justify;
+	text-indent: 15px;
 	z-index: 10px;
 }
 
@@ -30,7 +31,7 @@ body .popover{
 
 .footer{
 	margin-top: 70px;
-	border-bottom: 4px double rgba(255,255,255,.4);
+	border-bottom: 4px double #e4e5ee;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 100px;
@@ -92,19 +93,15 @@ p{
 
 span-popover{
 	font-size: 12px;
-	text-indent: 15px;
 	text-align: justify;
 	font-family: 'Times New Roman', sans-serif;
 	color: black;
-	text-align-last: start;
-	font-family: Times New Roman, sans-serif;
-
 }
 
 
 h3{
 	font-size: 27px !important;
-	text-indent: 40px;
+	text-indent: 30px;
 	font-weight: bold;
 	font-family: Times New Roman, sans-serif;
 	color:#431666 !important;
@@ -117,8 +114,8 @@ h3{
 	font-family: Times New Roman;
 	text-align: center;
 	margin-right: 30px;
-	color: white;
-	text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #431666;
+	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 span{
@@ -165,7 +162,7 @@ p a{
 
 keyword{
 	font-size: 17px;
-	color: black;
+	color: #431666;
 	font-weight: bold;
 	text-shadow: none;
 	font-family: Lucida Sans;
@@ -247,10 +244,11 @@ span3{
 }
 
 .modal-image{
-	margin-left: 20px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 5px;
 	margin-bottom: 10px;
-	vertical-align: middle;
+	display: block;
 }
 
 .list{
@@ -264,6 +262,7 @@ span3{
 	overflow-y: auto;
 	position: sticky;
   	top: 20px;
+  	padding: 15px 15px 15px 15px;
 }
 
 
@@ -274,12 +273,17 @@ li{
 	margin-left: 35px;
 }
 
+
 /* MODAL PROPERTIES */
 
 .modalP{
 	font-size: 15px;
 	text-indent: 30px;
 	font-family: Times New Roman, sans-serif;
+	overflow-y: auto;
+	padding-right: 10px;
+	height:300px;
+
 }
 
 
@@ -294,7 +298,6 @@ li{
 .modal-text{
 	font-size: 15px;
 	text-indent: 25px;
-	
 	color: black;
 	text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 	font-weight: normal;
@@ -327,10 +330,9 @@ li{
 }
 
 .modal-body{
-	overflow-y: scroll;
+	
 	margin-left: 15px;
 	margin-right: 15px;
-
 }
 
 
@@ -481,4 +483,3 @@ img{
 		height:3.5em;
     }
 }
-

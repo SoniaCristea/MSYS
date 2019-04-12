@@ -13,6 +13,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
 
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
 
 </head>
 
@@ -57,7 +60,7 @@
          Digital recordings, whether stored on a compact disc (CD), digital audio tape (DAT), or on a personal computer, do not degrade over time and can be copied perfectly without introducing any additional noise. The following image illustrates a sampled audio waveform:
          <div class="hide popover" id="div1">
           <span-popover>Bit depth is the number of bits of information in each sample  and it directly corresponds to the resolution of each sample. Bit depth is only meaningful in reference to a PCM digital signal.</span-popover>
-          <img src="" class="pop" width="300px" height="250px"><br></br><span-popover>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</span-popover>
+          <img src="" class="pop" width="300px" height="250px" style="padding-bottom: 15px;"></br><span-popover>In this example,the bit depth is four, so each amplitude of the sample is one of 16 possible values.</span-popover>
         </div></p>
 
       <!-- Image + caption -->
@@ -86,7 +89,7 @@
       </div> 
       </p>
     
-      <p><i><b>What does shifting the pitch refer to? </b></i>Pitch shifting represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
+      <p><i><keyword>What does shifting the pitch refer to? </keyword></i>Pitch shifting represents a technique, in which the original pitch of the sound is raised or lowered by a preset interval.
         Usually, the simplest methods are used to raise the pitch and reduce the duration, or vice-versa. This means replaying the original sound at a higher pace than it was recorded.
       </p>
       <br></br>
@@ -99,7 +102,7 @@
       
       <p class="subsection">• <span>Frequency</span> is the number of cycles per second and is measured in Hertz(Hz)</p>
       <p>• <span>Wavelength</span> is inversely proportional to frequency <span style='font-size:20px;'>&#10140;</span>
-       <u> wavelength varies as <i>1/frequency</i></u>
+       <keyword><i> wavelength varies as 1/frequency</i></keyword>
       </p>
       <br></br>
       <h3>2. The Sine vs Cosine Wave and Sound</h3>
@@ -123,7 +126,7 @@
        <p class="text-span2"><keyword><i>n</i></keyword> is the <keyword><i>sample index</i></keyword></p>
        <p><span>Cosine</span> is same as <span>Sine</span> (except 90 degrees out of phase)</p>
        <br></br>
-       <h3><span style='font-size:40px;'>&#10071;</span> Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></h3>
+       <h3> Relationship between <i><span>Amplitude</span></i>,<i><span>Frequency</span></i> and <i><span>Phase</span></i></h3>
        <div class="img-caption">
         <img class="image" src="img/rel.png"/>
         <p class="caption"><i>Figure 4. Relationship between Amplitude,Frequency and Phase</i></p>
@@ -133,8 +136,8 @@
        <p class="text-span2"><span>Frequency</span> of a wave is the number of waves that pass by each second</p>
        <p class="text-span2"><span>Amplitude</span> is the height of the wave and often related to power.</p>
        <p class="text-span2"><span>Phase</span> involves the relationship between the position of the amplitude crests and troughs of two waveforms.</p>
-       <p><span style='font-size:30px;'>&#10067;</span> For a better understanding, follow the animation in the following 
-       <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html">link</a></p>
+       <p><i class='fas fa-laptop' style='font-size:24px; color:#f72d5b'></i> Further applications of digital audio processing principles can be found
+       <a href="https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html">here</a>.</p>
        <br></br>
 	</div>
 
@@ -153,7 +156,7 @@
               <p class="modal-text" modal><i><b>Chorus</b></i> is an effect obtained when similar sounds with slight variations in tuning and timing overlap and are heard as one.
               It happens naturally when multiple sources make a similar sound overlap. Think of a real life choir singing multiple parts at the same time. They all overlap to form a distinct sound. The chorus effect does the same thing!</p>
 
-              <h3>How does Chorus work?</h3>
+              <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does Chorus work?</h3>
               <p class="modal-text">Chorus as an electronic effect works in the following way: the chorus audio processor (whether a pedal, effects unit or plugin) makes copies of the original audio signal and applies delay and pitch-modulation (using 
                 <a href="lfo" data-toggle="popover" data-trigger="hover" rel="popover">LFO</a>) to those copies.
               A stereo chorus does the same, with added <a href="panning" data-toggle="popover" data-trigger="hover" rel="popover">panning</a> in the delays and offset phase on the LFO. This causes those added copies and modulations to go between your left and right. The effect will sound fuller because of the movement in your stereo field.</p>
@@ -179,7 +182,7 @@
             <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Flanger</b></i> is an audio effect produced by mixing two identical signals together, one signal delayed by a small and gradually changing period, usually smaller than 20 milliseconds. This produces a swept comb filter effect: peaks and notches are produced in the resulting frequency spectrum, related to each other in a linear harmonic series. Varying the time delay causes these to sweep up and down the frequency spectrum.</p>
-               <h3>How does the flanger work?</h3>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does the flanger work?</h3>
                <p class="modal-text">
                  Flanging, while sonically similar to Phasing, is functionally closer to a Chorus. It uses a short delay (0.1ms – ~10ms) and modulates it against the dry signal with an LFO. If you kept extending the delay time on a flanger you’d end up with a chorus.It has the ability to feedback the processed signal to the input which further reinforces and intensifies the effect.
                </p>
@@ -193,7 +196,7 @@
             <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>A phaser</b></i> is an electronic sound processor used to filter a signal by creating a series of peaks and troughs in the frequency spectrum. The position of the peaks and troughs of the waveform being affected is typically modulated so that they vary over time, creating a sweeping effect. For this purpose, phasers usually include a low-frequency oscillator. </p>
-               <h3>How does the phaser work?</h3>
+               <h3 style="text-indent: 25px !important;">How does the phaser work?</h3>
                <p class="modal-text">
                  A phaser uses <a href="allpass" data-toggle="popover" data-trigger="hover" rel="popover">All-Pass Filters</a> instead of a delay line, but it’s a broadly similar concept and sound to the flanger. The filters create notches when mixed back with the dry signal and an LFO sweeps them through the frequency range. The more “stages” a phaser has the more notches and therefore the more intense the sound will be.
                </p>
@@ -214,7 +217,7 @@
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Pitch shifting</b></i> is a sound recording technique in which the original pitch of a sound is raised or lowered. Effects units that raise or lower pitch by a pre-designated musical interval (transposition) are called pitch shifters or pitch benders. </p>
-               <h3>How does pitch shifting work?</h3>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does pitch shifting work?</h3>
                <p class="modal-text">
                 The simplest methods are used to increase pitch and reduce durations, or vice versa, reduce pitch and increase duration. This can be done by replaying a sound waveform at a different speed than it was recorded. It could be accomplished on an early reel-to-reel tape recorder by changing the diameter of the capstan drive shaft, or using a different motor. As technologies improved later designs of motor speeds could be controlled by electronic servo system circuits. </p>
              </div>
@@ -231,8 +234,8 @@
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Reverberation</b></i>, in psychoacoustics and acoustics, is a persistence of sound after the sound is produced.
-               A reverberation, or reverb, is created when a sound or signal is reflected causing a large number of reflections to build up and then decay as the sound is absorbed by the surfaces of objects in the space – which could include furniture, people, and air.This is most noticeable when the sound source stops but the reflections continue, decreasing in amplitude, until they reach zero amplitude. </p>
-               <h3>How does reverb work?</h3>
+               A reverberation, or reverb, is created when a sound or signal is reflected causing a large number of reflections to build up and then decay as the sound is absorbed by the surfaces of objects in the space – which could include furniture, people, and air. This is most noticeable when the sound source stops but the reflections continue, decreasing in amplitude, until they reach zero amplitude. </p>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does reverb work?</h3>
                <p class="modal-text">
                  The most readily available reverb is the one found in natural spaces.
                  Digital reverbs and reverb plugins calculate the needed delay, level, frequency response and algorithmically generate multiple echoes. Reverb plugins do thousands of calculations per second—that’s why they’re often very CPU-intensive.
@@ -249,7 +252,10 @@
                <p class="modal-text" modal><i><b>Delay</b></i> is an audio effect and an effects unit which records an input signal to an audio storage medium, and then plays it back after a period of time. The delayed signal may either be played back multiple times, or played back into the recording again, to create the sound of a repeating, decaying echo.
                Delay effects range from a subtle echo effect to a pronounced blending of previous sounds with new sounds.
                Delay effect can be used to create single echoes, as well as a number of other effects. Delays of 35 milliseconds or more create discrete echoes, while those between 15‑34 milliseconds can create a simple chorus or flanging effect.</p>
-               <h3>How does delay work?</h3>
+               <p class="modal-text">
+                 Delay is a time-based audio effect that is the main building block of most every other time and phase-based effect.  Delay itself is exactly that, a lag that postpones the audio signal from playing for a number of milliseconds based on the tempo of the song.  This by itself isn't that useful, but combine the delayed signal with the original source and you can create all types of interesting sounds.
+               </p>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does delay work?</h3>
                <p class="modal-text">
                  Most delays work by playing back the dry signal while also playing back the wet or ‘delayed’ signal shortly after the original.
                  Early tape delay units featured a recording head and playback head(s) (also called a tap) a few inches apart. The result was an echoing of the recording signal shortly after it was played. Delay units with multiple taps and tape settings eventually gave artists the ability to playback multiple echoes at different intervals with a greater level of control.
@@ -264,6 +270,16 @@
                <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Echo</b></i> effect adds a series of repeated, decaying echoes to a sound. (For a single echo, use the Delay effect instead.) You can create effects ranging from a Grand Canyon‑type “Hello‑ello‑llo‑lo‑o” to metallic, clanging drainpipe sounds by varying the delay amount. By equalizing the delays, you can change a room’s characteristic sound from one with reflective surfaces (creating echoes that sound brighter) to one that is almost totally absorptive (creating echoes that sound darker).</p>
+               <p class="modal-text">
+                 In audio signal processing and acoustics, echo is a reflection of sound that arrives at the listener with a delay after the direct sound. ... Typical examples are the echo produced by the bottom of a well, by a building, or by the walls of an enclosed room and an empty room.
+               </p>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">The difference between <i>echo</i> and <i>delay</i></h3>
+               <p class="modal-text">
+                 A delay effect is a one-time replication of the original signal that is played back after a set amount of time, usually in hundreds of milliseconds.
+               </p>
+               <p class="modal-text">
+                 The difference is that an echo contains several instances of the original sound source delayed in multiples of the time frame of the first delay, with each instance being at a quieter volume until it is inaudible.  Everyone knows what an echo is and that's exactly what the echo effect is, but still called a delay by most.
+               </p>
              </div>
             </div>
             </li>
@@ -284,7 +300,7 @@
               • Built using a series of shelving and peak ﬁlters</br>
               • First or second-order ﬁlters usually employed</p>
               
-              <h3>How does equalization work?</h3>
+              <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does equalization work?</h3>
               <p class="modal-text">
                 EQing is like sculpting: it shapes the existing frequencies of your sound. It doesn’t add new frequencies per say.
                 By cutting or boosting certain frequencies, EQ shapes the tone and character of your sound. EQing also changes the balance between the frequencies that are already there.
@@ -303,7 +319,7 @@
               <div class="profile hide">
              <div class="modalP">
                <p class="modal-text" modal><i><b>Compression</b></i> is the reduction of dynamic range — the difference between the loudest and quietest parts of an audio signal. When compression is applied, the quieter parts of the signal are boosted and the louder ones are attenuated.</p>
-               <h3>How does compression work?</h3>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does compression work?</h3>
                <p class="modal-text">
                  Compressors reduce the gain of your signal (‘GR’ stands for Gain Reduction on your DAW compressor). Compression reduces the dynamic range of a signal. The dynamic range is the difference between the loudest and the quietest parts of a signal.
                  Compressors lower the volume of loud peaks–they even out the notes that stick out in the mix. This allows you to bring up the gain of the whole signal without clipping.
@@ -319,7 +335,7 @@
              <div class="modalP">
               <p class="modal-text"><i><b>Overdrive</b></i>  - audio at a low input level is driven by higher input levels in a non-linear curve characteristic. For overdrive, Symmetrical soft clipping of input values has to be performed.  </p>
                <p class="modal-text" modal><i><b>Distortion</b></i> is an overloading of the audio circuit that causes the signal to clip. It might sound like something you wanna stay away from—but when used right it’s very effective as a creative tool. Bit-crushing is the lo-fi digital equivalent of the distortion effect.</p>
-               <h3>How does distortion work?</h3>
+               <h3 style="text-indent: 25px !important; margin-bottom: 15px; margin-top: 25px;">How does distortion work?</h3>
                <p class="modal-text">
                  Distortion changes your original signal by pushing the sound to clip and compress. This adds harmonic content and colors the sound in a pleasant way. Bit-crushing works by reducing the resolution of a sound—specifically the sampling rate or the bit rate.</br>
                  <p class="modal-text">Distortion and overdrive are forms of audio signal processing used to alter the sound of amplified electric musical instruments, usually by increasing their gain, producing a "fuzzy", "growling", or "gritty" tone.</p>
@@ -341,14 +357,9 @@
               <p class="modal-text" modal><i><b>A high-pass filter</b></i> is an electronic filter that passes signals with a frequency higher than a certain cutoff frequency and attenuates signals with frequencies lower than the cutoff frequency.  The amount of attenuation for each frequency depends on the filter design. A high-pass filter is usually modeled as a linear time-invariant system. It is sometimes called a low-cut filter or bass-cut filter. High-pass filters have many uses, such as blocking DC from circuitry sensitive to non-zero average voltages or radio frequency devices. They can also be used in conjunction with a low-pass filter to produce a bandpass filter. </p>
               <p class="modal-text">
                 A highpass filter does exactly the opposite to a lowpass filter, i.e. it attenuates the low frequency components of a spectrum while ‘passing’ the high frequencies within a specified range. Some examples of high-pass filters include:</br>
-
-                (i) <b>The ideal high-pass filter</b></br>
-                <img class="modal-image" src="img/ideal_hpf.png"> </br>
-                (ii) <b>The Gaussian high-pass folder</b></br>
-                <img class="modal-image" src="img/gaussian_hpf.png"></br>
-                (iii) <b>The Butterworth high-pass filter</b></br>
-                <img class="modal-image" src="img/butterworth_hpf.png">
               </p>
+              <img class="modal-image" src="img/HPF1.png"></br>
+              <img class="modal-image" src="img/HPF2.png" width="450px" height="250px">
              </div>
             </div>
             </li>
@@ -365,7 +376,11 @@
                <img class="modal-image" src="img/lpf.png">
               <p class="modal-text">
                 Low pass filters can be constructed using resistors with either capacitors or inductors. A low pass filter composed of a resistor and a capacitor is called a low pass RC filter. And a low pass filter with a resistor and an inductor is called a low pass RL filter. </br>
-              </p>
+              </p></br>
+
+              <img class="modal-image" src="img/LPF1.png"></br>
+              <img class="modal-image" src="img/LPF2.png" width="450px" height="250px">
+
              </div>
             </div>
             </li>
@@ -378,11 +393,15 @@
               <p class="modal-text" modal><i><b>BPFs</b></i> let through all the frequencies in the determined band, and attenuate everything below and above.</p>
               <p class="modal-text">
                 Band Pass Filters can be used to isolate or filter out certain frequencies that lie within a particular band or range of frequencies. The cut-off frequency or ƒc point in a simple RC passive filter can be accurately controlled using just a single resistor in series with a non-polarized capacitor, and depending upon which way around they are connected, we have seen that either a Low Pass or a High Pass filter is obtained.
-              </p>
+              </p></br>
+              <img class="modal-image" src="img/bpf.png">
               <p class="modal-text">
                 By connecting or “cascading” together a single Low Pass Filter circuit with a High Pass Filter circuit, we can produce another type of passive RC filter that passes a selected range or “band” of frequencies that can be either narrow or wide while attenuating all those outside of this range. This new type of passive filter arrangement produces a frequency selective filter known commonly as a Band Pass Filter or BPF for short.</br>
-                <img class="modal-image" src="img/bpf.png">
-              </p>
+                
+              </p></br>
+
+              <img class="modal-image" src="img/BPF1.png"></br>
+              <img class="modal-image" src="img/BPF2.png" width="450px" height="250px">
              </div>
             </div>
             </li>
